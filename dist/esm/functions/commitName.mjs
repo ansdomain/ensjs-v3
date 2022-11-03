@@ -6,7 +6,7 @@ async function commitName_default({ contracts }, name, { resolverAddress, ...par
   if (labels.length !== 2 || labels[1] !== "arb")
     throw new Error("Currently only .arb TLD registrations are supported");
   wrappedLabelLengthCheck(labels[0]);
-  const controller = await contracts.getEthRegistrarController();
+  const controller = await contracts.getArbRegistrarController();
   const resolver = await contracts.getPublicResolver(
     void 0,
     resolverAddress

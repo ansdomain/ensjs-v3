@@ -11,11 +11,11 @@ declare const _default: (signer: JsonRpcSigner, populate: boolean) => ({ customD
     value?: import("ethers").BigNumber | undefined;
     chainId?: number | undefined;
     type?: number | undefined;
-    accessList?: import("ethers/lib/utils").AccessList | undefined;
+    accessList?: import("@ethersproject/transactions").AccessList | undefined;
     maxFeePerGas?: import("ethers").BigNumber | undefined;
     maxPriorityFeePerGas?: import("ethers").BigNumber | undefined;
     ccipReadEnabled?: boolean | undefined;
-} | Promise<import("@ethersproject/providers").TransactionResponse | (import("@ethersproject/providers").TransactionResponse & {
+} | Promise<import("@ethersproject/abstract-provider").TransactionResponse | (import("@ethersproject/abstract-provider").TransactionResponse & {
     customData: CustomData;
 })>;
 export default _default;

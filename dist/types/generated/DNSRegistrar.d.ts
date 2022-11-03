@@ -15,7 +15,7 @@ export declare namespace DNSSEC {
 export interface DNSRegistrarInterface extends utils.Interface {
     functions: {
         "claim(bytes,bytes)": FunctionFragment;
-        "ens()": FunctionFragment;
+        "ans()": FunctionFragment;
         "oracle()": FunctionFragment;
         "proveAndClaim(bytes,(bytes,bytes)[],bytes)": FunctionFragment;
         "proveAndClaimWithResolver(bytes,(bytes,bytes)[],bytes,address,address)": FunctionFragment;
@@ -24,9 +24,9 @@ export interface DNSRegistrarInterface extends utils.Interface {
         "suffixes()": FunctionFragment;
         "supportsInterface(bytes4)": FunctionFragment;
     };
-    getFunction(nameOrSignatureOrTopic: "claim" | "ens" | "oracle" | "proveAndClaim" | "proveAndClaimWithResolver" | "setOracle" | "setPublicSuffixList" | "suffixes" | "supportsInterface"): FunctionFragment;
+    getFunction(nameOrSignatureOrTopic: "claim" | "ans" | "oracle" | "proveAndClaim" | "proveAndClaimWithResolver" | "setOracle" | "setPublicSuffixList" | "suffixes" | "supportsInterface"): FunctionFragment;
     encodeFunctionData(functionFragment: "claim", values: [PromiseOrValue<BytesLike>, PromiseOrValue<BytesLike>]): string;
-    encodeFunctionData(functionFragment: "ens", values?: undefined): string;
+    encodeFunctionData(functionFragment: "ans", values?: undefined): string;
     encodeFunctionData(functionFragment: "oracle", values?: undefined): string;
     encodeFunctionData(functionFragment: "proveAndClaim", values: [
         PromiseOrValue<BytesLike>,
@@ -45,7 +45,7 @@ export interface DNSRegistrarInterface extends utils.Interface {
     encodeFunctionData(functionFragment: "suffixes", values?: undefined): string;
     encodeFunctionData(functionFragment: "supportsInterface", values: [PromiseOrValue<BytesLike>]): string;
     decodeFunctionResult(functionFragment: "claim", data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "oracle", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "proveAndClaim", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "proveAndClaimWithResolver", data: BytesLike): Result;
@@ -104,7 +104,7 @@ export interface DNSRegistrar extends BaseContract {
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
-        ens(overrides?: CallOverrides): Promise<[string]>;
+        ans(overrides?: CallOverrides): Promise<[string]>;
         oracle(overrides?: CallOverrides): Promise<[string]>;
         proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -129,7 +129,7 @@ export interface DNSRegistrar extends BaseContract {
     claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
-    ens(overrides?: CallOverrides): Promise<string>;
+    ans(overrides?: CallOverrides): Promise<string>;
     oracle(overrides?: CallOverrides): Promise<string>;
     proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
@@ -152,7 +152,7 @@ export interface DNSRegistrar extends BaseContract {
          * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_ens.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
          */
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<void>;
-        ens(overrides?: CallOverrides): Promise<string>;
+        ans(overrides?: CallOverrides): Promise<string>;
         oracle(overrides?: CallOverrides): Promise<string>;
         proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<void>;
         proveAndClaimWithResolver(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, resolver: PromiseOrValue<string>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
@@ -178,7 +178,7 @@ export interface DNSRegistrar extends BaseContract {
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
-        ens(overrides?: CallOverrides): Promise<BigNumber>;
+        ans(overrides?: CallOverrides): Promise<BigNumber>;
         oracle(overrides?: CallOverrides): Promise<BigNumber>;
         proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -204,7 +204,7 @@ export interface DNSRegistrar extends BaseContract {
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
-        ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+        ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         oracle(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;

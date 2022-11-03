@@ -5,7 +5,7 @@ import { DefaultReverseResolver__factory } from "./factories/DefaultReverseResol
 import { DNSRegistrar__factory } from "./factories/DNSRegistrar__factory.mjs";
 import { DNSSECImpl__factory } from "./factories/DNSSECImpl__factory.mjs";
 import { ENSRegistry__factory } from "./factories/ENSRegistry__factory.mjs";
-import { ETHRegistrarController__factory } from "./factories/ETHRegistrarController__factory.mjs";
+import { ARBRegistrarController__factory } from "./factories/ARBRegistrarController__factory.mjs";
 import { P256SHA256Algorithm__factory } from "./factories/P256SHA256Algorithm__factory.mjs";
 import { PublicResolver__factory } from "./factories/PublicResolver__factory.mjs";
 import { ReverseRegistrar__factory } from "./factories/ReverseRegistrar__factory.mjs";
@@ -22,13 +22,13 @@ import { StaticMetadataService__factory } from "./factories/StaticMetadataServic
 import { UniversalResolver__factory } from "./factories/UniversalResolver__factory.mjs";
 import { BulkRenewal__factory } from "./factories/BulkRenewal__factory.mjs";
 export {
+  ARBRegistrarController__factory,
   BaseRegistrarImplementation__factory,
   BulkRenewal__factory,
   DNSRegistrar__factory,
   DNSSECImpl__factory,
   DefaultReverseResolver__factory,
   ENSRegistry__factory,
-  ETHRegistrarController__factory,
   Multicall__factory,
   NameWrapper__factory,
   P256SHA256Algorithm__factory,

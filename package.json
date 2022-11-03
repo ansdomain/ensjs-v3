@@ -1,6 +1,6 @@
 {
   "name": "@ansdomain/ensjs",
-  "version": "3.0.0-alpha.31",
+  "version": "3.0.0-alpha.33",
   "description": "ANS javascript library for contract interaction",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
@@ -114,8 +114,8 @@
     "clean": "rm -rf ./dist ./README.md ./LICENSE",
     "lint": "eslint ./src/* --no-error-on-unmatched-pattern",
     "build:types": "tsc --emitDeclarationOnly --project tsconfig.build.json",
-    "build": "pnpm clean && pnpm lint && pnpm build:types && pnpm node esbuild.js",
-    "prepublish": "pnpm build && cp ../../README.md ../../LICENSE ./",
+    "build": "pnpm clean && pnpm build:types && pnpm node esbuild.js",
+    "prepublish": "pnpm build",
     "enode": "ganache --wallet.mnemonic=\"test test test test test test test test test test test junk\" --chain.chainId 1337 --chain.networkId 1337 --chain.time 1663311099000",
     "ver": "pnpm version --no-workspaces-update"
   }

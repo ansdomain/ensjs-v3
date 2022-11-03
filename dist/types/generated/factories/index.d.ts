@@ -4,7 +4,7 @@ export { DNSRegistrar__factory } from "./DNSRegistrar__factory";
 export { DNSSECImpl__factory } from "./DNSSECImpl__factory";
 export { DefaultReverseResolver__factory } from "./DefaultReverseResolver__factory";
 export { ENSRegistry__factory } from "./ENSRegistry__factory";
-export { ETHRegistrarController__factory } from "./ETHRegistrarController__factory";
+export { ARBRegistrarController__factory } from "./ARBRegistrarController__factory";
 export { Multicall__factory } from "./Multicall__factory";
 export { NameWrapper__factory } from "./NameWrapper__factory";
 export { P256SHA256Algorithm__factory } from "./P256SHA256Algorithm__factory";

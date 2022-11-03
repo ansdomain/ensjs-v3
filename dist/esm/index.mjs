@@ -5,7 +5,7 @@ import GqlManager from "./GqlManager.mjs";
 import singleCall from "./utils/singleCall.mjs";
 import writeTx from "./utils/writeTx.mjs";
 var graphURIEndpoints = {
-  421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testns-subgraph",
+  421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testns-subgraph"
 };
 var ANS = class {
   options;

@@ -28,7 +28,7 @@ __export(contracts_exports, {
 });
 module.exports = __toCommonJS(contracts_exports);
 var import_baseRegistrar = __toESM(require("./baseRegistrar"));
-var import_ethRegistrarController = __toESM(require("./ethRegistrarController"));
+var import_arbRegistrarController = __toESM(require("./arbRegistrarController"));
 var import_multicall = __toESM(require("./multicall"));
 var import_nameWrapper = __toESM(require("./nameWrapper"));
 var import_dnsRegistrar = __toESM(require("./dnsRegistrar"));
@@ -79,9 +79,9 @@ class ContractManager {
     "BaseRegistrarImplementation",
     import_baseRegistrar.default
   );
-  getEthRegistrarController = this.generateContractGetter(
-    "ETHRegistrarController",
-    import_ethRegistrarController.default
+  getArbRegistrarController = this.generateContractGetter(
+    "ARBRegistrarController",
+    import_arbRegistrarController.default
   );
   getMulticall = this.generateContractGetter("Multicall", import_multicall.default);
   getBulkRenewal = this.generateContractGetter(

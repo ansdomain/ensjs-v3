@@ -33,7 +33,8 @@ var import_GqlManager = __toESM(require("./GqlManager"));
 var import_singleCall = __toESM(require("./utils/singleCall"));
 var import_writeTx = __toESM(require("./utils/writeTx"));
 const graphURIEndpoints = {
-  421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testns-subgraph",
+  421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testns-subgraph"
+};
 class ANS {
   options;
   provider;

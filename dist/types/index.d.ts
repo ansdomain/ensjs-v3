@@ -2,7 +2,6 @@ import type { JsonRpcSigner } from '@ethersproject/providers';
 import { ContractTransaction, ethers, PopulatedTransaction } from 'ethers';
 import { getContractAddress as _getContractAddress } from './contracts/getContractAddress';
 import ContractManager from './contracts/index';
-import { SupportedNetworkId } from './contracts/types';
 import type burnFuses from './functions/burnFuses';
 import type commitName from './functions/commitName';
 import type createSubname from './functions/createSubname';
@@ -76,7 +75,7 @@ export declare class ANS {
     protected graphURI?: string | null;
     protected initialProvider?: ethers.providers.JsonRpcProvider;
     contracts?: ContractManager;
-    getContractAddress: (networkId: SupportedNetworkId) => import("./contracts/getContractAddress").ContractAddressFetch;
+    getContractAddress: (networkId: "421613") => import("./contracts/getContractAddress").ContractAddressFetch;
     gqlInstance: GqlManager;
     constructor(options?: ENSOptions);
     /**

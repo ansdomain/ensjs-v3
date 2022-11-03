@@ -4,17 +4,17 @@ import type { Listener, Provider } from "@ethersproject/providers";
 import type { TypedEventFilter, TypedEvent, TypedListener, OnEvent, PromiseOrValue } from "./common";
 export interface BulkRenewalInterface extends utils.Interface {
     functions: {
-        "ens()": FunctionFragment;
+        "ans()": FunctionFragment;
         "renewAll(string[],uint256)": FunctionFragment;
         "rentPrice(string[],uint256)": FunctionFragment;
         "supportsInterface(bytes4)": FunctionFragment;
     };
-    getFunction(nameOrSignatureOrTopic: "ens" | "renewAll" | "rentPrice" | "supportsInterface"): FunctionFragment;
-    encodeFunctionData(functionFragment: "ens", values?: undefined): string;
+    getFunction(nameOrSignatureOrTopic: "ans" | "renewAll" | "rentPrice" | "supportsInterface"): FunctionFragment;
+    encodeFunctionData(functionFragment: "ans", values?: undefined): string;
     encodeFunctionData(functionFragment: "renewAll", values: [PromiseOrValue<string>[], PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "rentPrice", values: [PromiseOrValue<string>[], PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "supportsInterface", values: [PromiseOrValue<BytesLike>]): string;
-    decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "renewAll", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "rentPrice", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "supportsInterface", data: BytesLike): Result;
@@ -35,7 +35,7 @@ export interface BulkRenewal extends BaseContract {
     once: OnEvent<this>;
     removeListener: OnEvent<this>;
     functions: {
-        ens(overrides?: CallOverrides): Promise<[string]>;
+        ans(overrides?: CallOverrides): Promise<[string]>;
         renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: PayableOverrides & {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
@@ -44,21 +44,21 @@ export interface BulkRenewal extends BaseContract {
         }>;
         supportsInterface(interfaceID: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<[boolean]>;
     };
-    ens(overrides?: CallOverrides): Promise<string>;
+    ans(overrides?: CallOverrides): Promise<string>;
     renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: PayableOverrides & {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
     rentPrice(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
     supportsInterface(interfaceID: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<boolean>;
     callStatic: {
-        ens(overrides?: CallOverrides): Promise<string>;
+        ans(overrides?: CallOverrides): Promise<string>;
         renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<void>;
         rentPrice(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         supportsInterface(interfaceID: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<boolean>;
     };
     filters: {};
     estimateGas: {
-        ens(overrides?: CallOverrides): Promise<BigNumber>;
+        ans(overrides?: CallOverrides): Promise<BigNumber>;
         renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: PayableOverrides & {
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
@@ -66,7 +66,7 @@ export interface BulkRenewal extends BaseContract {
         supportsInterface(interfaceID: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<BigNumber>;
     };
     populateTransaction: {
-        ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+        ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: PayableOverrides & {
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;

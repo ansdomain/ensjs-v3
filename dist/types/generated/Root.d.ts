@@ -5,7 +5,7 @@ import type { TypedEventFilter, TypedEvent, TypedListener, OnEvent, PromiseOrVal
 export interface RootInterface extends utils.Interface {
     functions: {
         "controllers(address)": FunctionFragment;
-        "ens()": FunctionFragment;
+        "ans()": FunctionFragment;
         "isOwner(address)": FunctionFragment;
         "lock(bytes32)": FunctionFragment;
         "locked(bytes32)": FunctionFragment;
@@ -16,9 +16,9 @@ export interface RootInterface extends utils.Interface {
         "supportsInterface(bytes4)": FunctionFragment;
         "transferOwnership(address)": FunctionFragment;
     };
-    getFunction(nameOrSignatureOrTopic: "controllers" | "ens" | "isOwner" | "lock" | "locked" | "owner" | "setController" | "setResolver" | "setSubnodeOwner" | "supportsInterface" | "transferOwnership"): FunctionFragment;
+    getFunction(nameOrSignatureOrTopic: "controllers" | "ans" | "isOwner" | "lock" | "locked" | "owner" | "setController" | "setResolver" | "setSubnodeOwner" | "supportsInterface" | "transferOwnership"): FunctionFragment;
     encodeFunctionData(functionFragment: "controllers", values: [PromiseOrValue<string>]): string;
-    encodeFunctionData(functionFragment: "ens", values?: undefined): string;
+    encodeFunctionData(functionFragment: "ans", values?: undefined): string;
     encodeFunctionData(functionFragment: "isOwner", values: [PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "lock", values: [PromiseOrValue<BytesLike>]): string;
     encodeFunctionData(functionFragment: "locked", values: [PromiseOrValue<BytesLike>]): string;
@@ -29,7 +29,7 @@ export interface RootInterface extends utils.Interface {
     encodeFunctionData(functionFragment: "supportsInterface", values: [PromiseOrValue<BytesLike>]): string;
     encodeFunctionData(functionFragment: "transferOwnership", values: [PromiseOrValue<string>]): string;
     decodeFunctionResult(functionFragment: "controllers", data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "isOwner", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "lock", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "locked", data: BytesLike): Result;
@@ -65,7 +65,7 @@ export interface Root extends BaseContract {
     removeListener: OnEvent<this>;
     functions: {
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
-        ens(overrides?: CallOverrides): Promise<[string]>;
+        ans(overrides?: CallOverrides): Promise<[string]>;
         isOwner(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
         lock(label: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -87,7 +87,7 @@ export interface Root extends BaseContract {
         }): Promise<ContractTransaction>;
     };
     controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
-    ens(overrides?: CallOverrides): Promise<string>;
+    ans(overrides?: CallOverrides): Promise<string>;
     isOwner(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
     lock(label: PromiseOrValue<BytesLike>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
@@ -109,7 +109,7 @@ export interface Root extends BaseContract {
     }): Promise<ContractTransaction>;
     callStatic: {
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
-        ens(overrides?: CallOverrides): Promise<string>;
+        ans(overrides?: CallOverrides): Promise<string>;
         isOwner(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
         lock(label: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<void>;
         locked(arg0: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<boolean>;
@@ -126,7 +126,7 @@ export interface Root extends BaseContract {
     };
     estimateGas: {
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
-        ens(overrides?: CallOverrides): Promise<BigNumber>;
+        ans(overrides?: CallOverrides): Promise<BigNumber>;
         isOwner(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
         lock(label: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -149,7 +149,7 @@ export interface Root extends BaseContract {
     };
     populateTransaction: {
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-        ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+        ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         isOwner(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         lock(label: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;

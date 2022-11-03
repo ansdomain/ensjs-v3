@@ -1,6 +1,6 @@
 // src/contracts/index.ts
 import getBaseRegistrar from "./baseRegistrar.mjs";
-import getEthRegistrarController from "./ethRegistrarController.mjs";
+import getArbRegistrarController from "./arbRegistrarController.mjs";
 import getMulticall from "./multicall.mjs";
 import getNameWrapper from "./nameWrapper.mjs";
 import getDNSRegistrar from "./dnsRegistrar.mjs";
@@ -51,9 +51,9 @@ var ContractManager = class {
     "BaseRegistrarImplementation",
     getBaseRegistrar
   );
-  getEthRegistrarController = this.generateContractGetter(
-    "ETHRegistrarController",
-    getEthRegistrarController
+  getArbRegistrarController = this.generateContractGetter(
+    "ARBRegistrarController",
+    getArbRegistrarController
   );
   getMulticall = this.generateContractGetter("Multicall", getMulticall);
   getBulkRenewal = this.generateContractGetter(

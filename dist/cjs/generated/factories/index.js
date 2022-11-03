@@ -18,13 +18,13 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var factories_exports = {};
 __export(factories_exports, {
+  ARBRegistrarController__factory: () => import_ARBRegistrarController_factory.ARBRegistrarController__factory,
   BaseRegistrarImplementation__factory: () => import_BaseRegistrarImplementation_factory.BaseRegistrarImplementation__factory,
   BulkRenewal__factory: () => import_BulkRenewal_factory.BulkRenewal__factory,
   DNSRegistrar__factory: () => import_DNSRegistrar_factory.DNSRegistrar__factory,
   DNSSECImpl__factory: () => import_DNSSECImpl_factory.DNSSECImpl__factory,
   DefaultReverseResolver__factory: () => import_DefaultReverseResolver_factory.DefaultReverseResolver__factory,
   ENSRegistry__factory: () => import_ENSRegistry_factory.ENSRegistry__factory,
-  ETHRegistrarController__factory: () => import_ETHRegistrarController_factory.ETHRegistrarController__factory,
   Multicall__factory: () => import_Multicall_factory.Multicall__factory,
   NameWrapper__factory: () => import_NameWrapper_factory.NameWrapper__factory,
   P256SHA256Algorithm__factory: () => import_P256SHA256Algorithm_factory.P256SHA256Algorithm__factory,
@@ -47,7 +47,7 @@ var import_DNSRegistrar_factory = require("./DNSRegistrar__factory");
 var import_DNSSECImpl_factory = require("./DNSSECImpl__factory");
 var import_DefaultReverseResolver_factory = require("./DefaultReverseResolver__factory");
 var import_ENSRegistry_factory = require("./ENSRegistry__factory");
-var import_ETHRegistrarController_factory = require("./ETHRegistrarController__factory");
+var import_ARBRegistrarController_factory = require("./ARBRegistrarController__factory");
 var import_Multicall_factory = require("./Multicall__factory");
 var import_NameWrapper_factory = require("./NameWrapper__factory");
 var import_P256SHA256Algorithm_factory = require("./P256SHA256Algorithm__factory");

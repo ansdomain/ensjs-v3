@@ -195,7 +195,7 @@ var _abi = [
   },
   {
     inputs: [],
-    name: "ens",
+    name: "ans",
     outputs: [
       {
         internalType: "contract ANS",
