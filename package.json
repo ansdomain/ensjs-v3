@@ -1,0 +1,116 @@
+{
+  "name": "@ansdomain/ensjs",
+  "version": "3.0.0-alpha.335",
+  "description": "ANS javascript library for contract interaction",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.mjs"
+    },
+    "./*.js": {
+      "import": "./dist/esm/*.mjs",
+      "require": "./dist/cjs/*.js",
+      "default": "./dist/esm/*.mjs"
+    },
+    "./*.mjs": {
+      "import": "./dist/esm/*.mjs",
+      "require": "./dist/cjs/*.js",
+      "default": "./dist/esm/*.mjs"
+    },
+    "./*": {
+      "import": "./dist/esm/*.mjs",
+      "require": "./dist/cjs/*.js",
+      "default": "./dist/esm/*.mjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "contracts/*": [
+        "./dist/types/contracts/*"
+      ],
+      "functions/*": [
+        "./dist/types/functions/*"
+      ],
+      "utils/*": [
+        "./dist/types/utils/*"
+      ],
+      "generated/*": [
+        "./dist/types/generated/*"
+      ]
+    }
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "!src/tests"
+  ],
+  "repository": "git@github.com:ensdomains/ensjs-v3.git",
+  "author": "TateB <yo@taytems.xyz>",
+  "license": "MIT",
+  "dependencies": {
+    "@ensdomains/address-encoder": "0.2.16",
+    "@ensdomains/content-hash": "^2.5.7",
+    "@ensdomains/dnsprovejs": "^0.4.1",
+    "@ensdomains/dnssecoraclejs": "^0.2.7",
+    "dns-packet": "^5.3.1",
+    "ethers": "^5.6.1",
+    "graphql": "^16.3.0",
+    "graphql-request": "next",
+    "idna-uts46-hx": "3.4.0",
+    "traverse": "^0.6.6"
+  },
+  "devDependencies": {
+    "@ensdomains/buffer": "^0.0.13",
+    "@ensdomains/ens-contracts": "^0.0.15",
+    "@ensdomains/ens-test-env": "0.3.2",
+    "@ethersproject/abi": "^5.6.0",
+    "@ethersproject/providers": "^5.6.2",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "@swc/core": "^1.2.162",
+    "@swc/jest": "^0.2.20",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@types/bn.js": "^5.1.0",
+    "@types/jest": "^27.4.1",
+    "@types/traverse": "^0.6.32",
+    "dotenv": "^16.0.0",
+    "esbuild": "^0.15.6",
+    "eslint-plugin-jest": "^27.0.1",
+    "ganache": "^7.4.0",
+    "glob": "^8.0.3",
+    "hardhat": "2.10.2",
+    "hardhat-abi-exporter": "^2.8.0",
+    "hardhat-deploy": "^0.11.12",
+    "jest": "^27.5.1",
+    "jest-environment-node": "^27.5.1",
+    "jest-localstorage-mock": "^2.4.21",
+    "nock": "^13.2.8",
+    "node-fetch": "^3.2.6",
+    "node-fetch-commonjs": "^3.1.1",
+    "solc": "^0.8.13",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typechain": "^8.1.0",
+    "typescript": "^4.7.4",
+    "wait-on": "^6.0.1"
+  },
+  "peerDependencies": {
+    "ethers": "*"
+  },
+  "scripts": {
+    "tenv": "ens-test-env -a",
+    "denv": "pnpm tenv start -ns -nb --extra-time 11368000",
+    "generate-types": "ts-node scripts/runTypechain.ts",
+
+    "pub": "yarn publish --access public",
+    
+    "generate-abis": "hardhat export-abi",
+    "enode": "ganache --wallet.mnemonic=\"test test test test test test test test test test test junk\" --chain.chainId 1337 --chain.networkId 1337 --chain.time 1663311099000",
+    "ver": "pnpm version --no-workspaces-update"
+  }
+}
