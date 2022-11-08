@@ -9,8 +9,12 @@ import { ANSRegistry__factory } from "./factories/ANSRegistry__factory.mjs";
 import { ARBRegistrarController__factory } from "./factories/ARBRegistrarController__factory.mjs";
 =======
 import { ENSRegistry__factory } from "./factories/ENSRegistry__factory.mjs";
+<<<<<<< HEAD
 import { ETHRegistrarController__factory } from "./factories/ETHRegistrarController__factory.mjs";
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+import { ARBRegistrarController__factory } from "./factories/ARBRegistrarController__factory.mjs";
+>>>>>>> 2cef18d8 (new config)
 import { P256SHA256Algorithm__factory } from "./factories/P256SHA256Algorithm__factory.mjs";
 import { PublicResolver__factory } from "./factories/PublicResolver__factory.mjs";
 import { ReverseRegistrar__factory } from "./factories/ReverseRegistrar__factory.mjs";
@@ -27,6 +31,7 @@ import { StaticMetadataService__factory } from "./factories/StaticMetadataServic
 import { UniversalResolver__factory } from "./factories/UniversalResolver__factory.mjs";
 import { BulkRenewal__factory } from "./factories/BulkRenewal__factory.mjs";
 export {
+  ARBRegistrarController__factory,
   BaseRegistrarImplementation__factory,
   BulkRenewal__factory,
   DNSRegistrar__factory,
@@ -37,8 +42,11 @@ export {
   ARBRegistrarController__factory,
 =======
   ENSRegistry__factory,
+<<<<<<< HEAD
   ETHRegistrarController__factory,
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+>>>>>>> 2cef18d8 (new config)
   Multicall__factory,
   NameWrapper__factory,
   P256SHA256Algorithm__factory,

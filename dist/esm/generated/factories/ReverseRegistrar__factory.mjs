@@ -200,10 +200,14 @@ var _abi = [
   {
     inputs: [],
 <<<<<<< HEAD
+<<<<<<< HEAD
     name: "ans",
 =======
     name: "ens",
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    name: "ans",
+>>>>>>> 2cef18d8 (new config)
     outputs: [
       {
         internalType: "contract ANS",

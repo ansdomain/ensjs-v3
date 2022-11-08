@@ -5,14 +5,19 @@ import type { TypedEventFilter, TypedEvent, TypedListener, OnEvent, PromiseOrVal
 export interface BulkRenewalInterface extends utils.Interface {
     functions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "ans()": FunctionFragment;
 =======
         "ens()": FunctionFragment;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        "ans()": FunctionFragment;
+>>>>>>> 2cef18d8 (new config)
         "renewAll(string[],uint256)": FunctionFragment;
         "rentPrice(string[],uint256)": FunctionFragment;
         "supportsInterface(bytes4)": FunctionFragment;
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
     getFunction(nameOrSignatureOrTopic: "ans" | "renewAll" | "rentPrice" | "supportsInterface"): FunctionFragment;
     encodeFunctionData(functionFragment: "ans", values?: undefined): string;
@@ -28,6 +33,14 @@ export interface BulkRenewalInterface extends utils.Interface {
     encodeFunctionData(functionFragment: "supportsInterface", values: [PromiseOrValue<BytesLike>]): string;
     decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    getFunction(nameOrSignatureOrTopic: "ans" | "renewAll" | "rentPrice" | "supportsInterface"): FunctionFragment;
+    encodeFunctionData(functionFragment: "ans", values?: undefined): string;
+    encodeFunctionData(functionFragment: "renewAll", values: [PromiseOrValue<string>[], PromiseOrValue<BigNumberish>]): string;
+    encodeFunctionData(functionFragment: "rentPrice", values: [PromiseOrValue<string>[], PromiseOrValue<BigNumberish>]): string;
+    encodeFunctionData(functionFragment: "supportsInterface", values: [PromiseOrValue<BytesLike>]): string;
+    decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
+>>>>>>> 2cef18d8 (new config)
     decodeFunctionResult(functionFragment: "renewAll", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "rentPrice", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "supportsInterface", data: BytesLike): Result;
@@ -49,10 +62,14 @@ export interface BulkRenewal extends BaseContract {
     removeListener: OnEvent<this>;
     functions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<[string]>;
 =======
         ens(overrides?: CallOverrides): Promise<[string]>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<[string]>;
+>>>>>>> 2cef18d8 (new config)
         renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: PayableOverrides & {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
@@ -62,10 +79,14 @@ export interface BulkRenewal extends BaseContract {
         supportsInterface(interfaceID: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<[boolean]>;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
     ans(overrides?: CallOverrides): Promise<string>;
 =======
     ens(overrides?: CallOverrides): Promise<string>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    ans(overrides?: CallOverrides): Promise<string>;
+>>>>>>> 2cef18d8 (new config)
     renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: PayableOverrides & {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
@@ -73,10 +94,14 @@ export interface BulkRenewal extends BaseContract {
     supportsInterface(interfaceID: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<boolean>;
     callStatic: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<string>;
 =======
         ens(overrides?: CallOverrides): Promise<string>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<string>;
+>>>>>>> 2cef18d8 (new config)
         renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<void>;
         rentPrice(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         supportsInterface(interfaceID: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<boolean>;
@@ -84,10 +109,14 @@ export interface BulkRenewal extends BaseContract {
     filters: {};
     estimateGas: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<BigNumber>;
 =======
         ens(overrides?: CallOverrides): Promise<BigNumber>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<BigNumber>;
+>>>>>>> 2cef18d8 (new config)
         renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: PayableOverrides & {
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
@@ -96,10 +125,14 @@ export interface BulkRenewal extends BaseContract {
     };
     populateTransaction: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 =======
         ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+>>>>>>> 2cef18d8 (new config)
         renewAll(names: PromiseOrValue<string>[], duration: PromiseOrValue<BigNumberish>, overrides?: PayableOverrides & {
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;

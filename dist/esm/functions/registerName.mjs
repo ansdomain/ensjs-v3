@@ -9,10 +9,14 @@ async function registerName_default({ contracts }, name, { resolverAddress, valu
     throw new Error("Currently only .arb TLD registrations are supported");
   wrappedLabelLengthCheck(labels[0]);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const controller = await contracts.getArbRegistrarController();
 =======
   const controller = await contracts.getEthRegistrarController();
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+  const controller = await contracts.getArbRegistrarController();
+>>>>>>> 2cef18d8 (new config)
   const _resolver = await contracts.getPublicResolver(
     void 0,
     resolverAddress

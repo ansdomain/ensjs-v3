@@ -24,6 +24,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var generated_exports = {};
 __export(generated_exports, {
+  ARBRegistrarController__factory: () => import_ARBRegistrarController_factory.ARBRegistrarController__factory,
   BaseRegistrarImplementation__factory: () => import_BaseRegistrarImplementation_factory.BaseRegistrarImplementation__factory,
   BulkRenewal__factory: () => import_BulkRenewal_factory.BulkRenewal__factory,
   DNSRegistrar__factory: () => import_DNSRegistrar_factory.DNSRegistrar__factory,
@@ -34,8 +35,11 @@ __export(generated_exports, {
   ARBRegistrarController__factory: () => import_ARBRegistrarController_factory.ARBRegistrarController__factory,
 =======
   ENSRegistry__factory: () => import_ENSRegistry_factory.ENSRegistry__factory,
+<<<<<<< HEAD
   ETHRegistrarController__factory: () => import_ETHRegistrarController_factory.ETHRegistrarController__factory,
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+>>>>>>> 2cef18d8 (new config)
   Multicall__factory: () => import_Multicall_factory.Multicall__factory,
   NameWrapper__factory: () => import_NameWrapper_factory.NameWrapper__factory,
   P256SHA256Algorithm__factory: () => import_P256SHA256Algorithm_factory.P256SHA256Algorithm__factory,
@@ -63,8 +67,12 @@ var import_ANSRegistry_factory = require("./factories/ANSRegistry__factory");
 var import_ARBRegistrarController_factory = require("./factories/ARBRegistrarController__factory");
 =======
 var import_ENSRegistry_factory = require("./factories/ENSRegistry__factory");
+<<<<<<< HEAD
 var import_ETHRegistrarController_factory = require("./factories/ETHRegistrarController__factory");
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+var import_ARBRegistrarController_factory = require("./factories/ARBRegistrarController__factory");
+>>>>>>> 2cef18d8 (new config)
 var import_P256SHA256Algorithm_factory = require("./factories/P256SHA256Algorithm__factory");
 var import_PublicResolver_factory = require("./factories/PublicResolver__factory");
 var import_ReverseRegistrar_factory = require("./factories/ReverseRegistrar__factory");

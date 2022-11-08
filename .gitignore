@@ -1,1 +1,8 @@
-/node_modules
+.yarn/*
+
+.env
+
+dist/
+archives/
+data/
+node_modules

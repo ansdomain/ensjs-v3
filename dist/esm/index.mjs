@@ -6,6 +6,7 @@ import singleCall from "./utils/singleCall.mjs";
 import writeTx from "./utils/writeTx.mjs";
 var graphURIEndpoints = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   1: "https://api.thegraph.com/subgraphs/name/ensdomains/ens",
   3: "https://api.thegraph.com/subgraphs/name/ensdomains/ensropsten",
   4: "https://api.thegraph.com/subgraphs/name/ensdomains/ensrinkeby",
@@ -14,6 +15,9 @@ var graphURIEndpoints = {
 =======
   421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testns-subgraph",
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+  421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testns-subgraph"
+>>>>>>> 2cef18d8 (new config)
 };
 var ANS = class {
   options;

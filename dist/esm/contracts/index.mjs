@@ -1,10 +1,14 @@
 // src/contracts/index.ts
 import getBaseRegistrar from "./baseRegistrar.mjs";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import getArbRegistrarController from "./arbRegistrarController.mjs";
 =======
 import getEthRegistrarController from "./ethRegistrarController.mjs";
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+import getArbRegistrarController from "./arbRegistrarController.mjs";
+>>>>>>> 2cef18d8 (new config)
 import getMulticall from "./multicall.mjs";
 import getNameWrapper from "./nameWrapper.mjs";
 import getDNSRegistrar from "./dnsRegistrar.mjs";
@@ -60,6 +64,7 @@ var ContractManager = class {
     getBaseRegistrar
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
   getArbRegistrarController = this.generateContractGetter(
     "ARBRegistrarController",
     getArbRegistrarController
@@ -68,6 +73,11 @@ var ContractManager = class {
     "ETHRegistrarController",
     getEthRegistrarController
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+  getArbRegistrarController = this.generateContractGetter(
+    "ARBRegistrarController",
+    getArbRegistrarController
+>>>>>>> 2cef18d8 (new config)
   );
   getMulticall = this.generateContractGetter("Multicall", getMulticall);
   getBulkRenewal = this.generateContractGetter(

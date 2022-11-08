@@ -8,8 +8,12 @@ export type { ANSRegistry } from "./ANSRegistry";
 export type { ARBRegistrarController } from "./ARBRegistrarController";
 =======
 export type { ENSRegistry } from "./ENSRegistry";
+<<<<<<< HEAD
 export type { ETHRegistrarController } from "./ETHRegistrarController";
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+export type { ARBRegistrarController } from "./ARBRegistrarController";
+>>>>>>> 2cef18d8 (new config)
 export type { Multicall } from "./Multicall";
 export type { NameWrapper } from "./NameWrapper";
 export type { P256SHA256Algorithm } from "./P256SHA256Algorithm";
@@ -34,8 +38,12 @@ export { ANSRegistry__factory } from "./factories/ANSRegistry__factory";
 export { ARBRegistrarController__factory } from "./factories/ARBRegistrarController__factory";
 =======
 export { ENSRegistry__factory } from "./factories/ENSRegistry__factory";
+<<<<<<< HEAD
 export { ETHRegistrarController__factory } from "./factories/ETHRegistrarController__factory";
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+export { ARBRegistrarController__factory } from "./factories/ARBRegistrarController__factory";
+>>>>>>> 2cef18d8 (new config)
 export { P256SHA256Algorithm__factory } from "./factories/P256SHA256Algorithm__factory";
 export { PublicResolver__factory } from "./factories/PublicResolver__factory";
 export { ReverseRegistrar__factory } from "./factories/ReverseRegistrar__factory";

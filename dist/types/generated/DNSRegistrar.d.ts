@@ -16,10 +16,14 @@ export interface DNSRegistrarInterface extends utils.Interface {
     functions: {
         "claim(bytes,bytes)": FunctionFragment;
 <<<<<<< HEAD
+<<<<<<< HEAD
         "ans()": FunctionFragment;
 =======
         "ens()": FunctionFragment;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        "ans()": FunctionFragment;
+>>>>>>> 2cef18d8 (new config)
         "oracle()": FunctionFragment;
         "proveAndClaim(bytes,(bytes,bytes)[],bytes)": FunctionFragment;
         "proveAndClaimWithResolver(bytes,(bytes,bytes)[],bytes,address,address)": FunctionFragment;
@@ -29,6 +33,7 @@ export interface DNSRegistrarInterface extends utils.Interface {
         "supportsInterface(bytes4)": FunctionFragment;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
     getFunction(nameOrSignatureOrTopic: "claim" | "ans" | "oracle" | "proveAndClaim" | "proveAndClaimWithResolver" | "setOracle" | "setPublicSuffixList" | "suffixes" | "supportsInterface"): FunctionFragment;
     encodeFunctionData(functionFragment: "claim", values: [PromiseOrValue<BytesLike>, PromiseOrValue<BytesLike>]): string;
     encodeFunctionData(functionFragment: "ans", values?: undefined): string;
@@ -37,6 +42,11 @@ export interface DNSRegistrarInterface extends utils.Interface {
     encodeFunctionData(functionFragment: "claim", values: [PromiseOrValue<BytesLike>, PromiseOrValue<BytesLike>]): string;
     encodeFunctionData(functionFragment: "ens", values?: undefined): string;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    getFunction(nameOrSignatureOrTopic: "claim" | "ans" | "oracle" | "proveAndClaim" | "proveAndClaimWithResolver" | "setOracle" | "setPublicSuffixList" | "suffixes" | "supportsInterface"): FunctionFragment;
+    encodeFunctionData(functionFragment: "claim", values: [PromiseOrValue<BytesLike>, PromiseOrValue<BytesLike>]): string;
+    encodeFunctionData(functionFragment: "ans", values?: undefined): string;
+>>>>>>> 2cef18d8 (new config)
     encodeFunctionData(functionFragment: "oracle", values?: undefined): string;
     encodeFunctionData(functionFragment: "proveAndClaim", values: [
         PromiseOrValue<BytesLike>,
@@ -56,10 +66,14 @@ export interface DNSRegistrarInterface extends utils.Interface {
     encodeFunctionData(functionFragment: "supportsInterface", values: [PromiseOrValue<BytesLike>]): string;
     decodeFunctionResult(functionFragment: "claim", data: BytesLike): Result;
 <<<<<<< HEAD
+<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
 =======
     decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
+>>>>>>> 2cef18d8 (new config)
     decodeFunctionResult(functionFragment: "oracle", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "proveAndClaim", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "proveAndClaimWithResolver", data: BytesLike): Result;
@@ -123,10 +137,14 @@ export interface DNSRegistrar extends BaseContract {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<[string]>;
 =======
         ens(overrides?: CallOverrides): Promise<[string]>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<[string]>;
+>>>>>>> 2cef18d8 (new config)
         oracle(overrides?: CallOverrides): Promise<[string]>;
         proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -156,10 +174,14 @@ export interface DNSRegistrar extends BaseContract {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     ans(overrides?: CallOverrides): Promise<string>;
 =======
     ens(overrides?: CallOverrides): Promise<string>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    ans(overrides?: CallOverrides): Promise<string>;
+>>>>>>> 2cef18d8 (new config)
     oracle(overrides?: CallOverrides): Promise<string>;
     proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
@@ -188,8 +210,12 @@ export interface DNSRegistrar extends BaseContract {
          * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_ens.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
          */
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<void>;
+<<<<<<< HEAD
         ens(overrides?: CallOverrides): Promise<string>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<string>;
+>>>>>>> 2cef18d8 (new config)
         oracle(overrides?: CallOverrides): Promise<string>;
         proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<void>;
         proveAndClaimWithResolver(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, resolver: PromiseOrValue<string>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
@@ -220,10 +246,14 @@ export interface DNSRegistrar extends BaseContract {
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<BigNumber>;
 =======
         ens(overrides?: CallOverrides): Promise<BigNumber>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<BigNumber>;
+>>>>>>> 2cef18d8 (new config)
         oracle(overrides?: CallOverrides): Promise<BigNumber>;
         proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -254,10 +284,14 @@ export interface DNSRegistrar extends BaseContract {
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 =======
         ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+>>>>>>> 2cef18d8 (new config)
         oracle(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         proveAndClaim(name: PromiseOrValue<BytesLike>, input: DNSSEC.RRSetWithSignatureStruct[], proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;

@@ -1,6 +1,10 @@
 {
   "name": "@ansdomain/ensjs",
+<<<<<<< HEAD
   "version": "3.0.0-alpha.336",
+=======
+  "version": "3.0.0-alpha.33",
+>>>>>>> 2cef18d8 (new config)
   "description": "ANS javascript library for contract interaction",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
@@ -108,6 +112,18 @@
     "generate-types": "ts-node scripts/runTypechain.ts",
     "pub": "yarn publish --access public",
     "generate-abis": "hardhat export-abi",
+<<<<<<< HEAD
+=======
+    "start": "ts-node --files src/index.test.ts",
+    "test": "jest --run-in-band",
+    "test:watch": "jest --watch --run-in-band",
+    "test:specific": "ts-node --files ",
+    "clean": "rm -rf ./dist ./README.md ./LICENSE",
+    "lint": "eslint ./src/* --no-error-on-unmatched-pattern",
+    "build:types": "tsc --emitDeclarationOnly --project tsconfig.build.json",
+    "build": "pnpm clean && pnpm build:types && pnpm node esbuild.js",
+    "prepublish": "pnpm build",
+>>>>>>> 2cef18d8 (new config)
     "enode": "ganache --wallet.mnemonic=\"test test test test test test test test test test test junk\" --chain.chainId 1337 --chain.networkId 1337 --chain.time 1663311099000",
     "ver": "pnpm version --no-workspaces-update"
   }

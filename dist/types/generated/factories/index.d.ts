@@ -8,8 +8,12 @@ export { ANSRegistry__factory } from "./ANSRegistry__factory";
 export { ARBRegistrarController__factory } from "./ARBRegistrarController__factory";
 =======
 export { ENSRegistry__factory } from "./ENSRegistry__factory";
+<<<<<<< HEAD
 export { ETHRegistrarController__factory } from "./ETHRegistrarController__factory";
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+export { ARBRegistrarController__factory } from "./ARBRegistrarController__factory";
+>>>>>>> 2cef18d8 (new config)
 export { Multicall__factory } from "./Multicall__factory";
 export { NameWrapper__factory } from "./NameWrapper__factory";
 export { P256SHA256Algorithm__factory } from "./P256SHA256Algorithm__factory";

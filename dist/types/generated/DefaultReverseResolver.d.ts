@@ -5,6 +5,7 @@ import type { TypedEventFilter, TypedEvent, TypedListener, OnEvent, PromiseOrVal
 export interface DefaultReverseResolverInterface extends utils.Interface {
     functions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "ans()": FunctionFragment;
         "name(bytes32)": FunctionFragment;
         "setName(bytes32,string)": FunctionFragment;
@@ -16,15 +17,22 @@ export interface DefaultReverseResolverInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
 =======
         "ens()": FunctionFragment;
+=======
+        "ans()": FunctionFragment;
+>>>>>>> 2cef18d8 (new config)
         "name(bytes32)": FunctionFragment;
         "setName(bytes32,string)": FunctionFragment;
     };
-    getFunction(nameOrSignatureOrTopic: "ens" | "name" | "setName"): FunctionFragment;
-    encodeFunctionData(functionFragment: "ens", values?: undefined): string;
+    getFunction(nameOrSignatureOrTopic: "ans" | "name" | "setName"): FunctionFragment;
+    encodeFunctionData(functionFragment: "ans", values?: undefined): string;
     encodeFunctionData(functionFragment: "name", values: [PromiseOrValue<BytesLike>]): string;
     encodeFunctionData(functionFragment: "setName", values: [PromiseOrValue<BytesLike>, PromiseOrValue<string>]): string;
+<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
+>>>>>>> 2cef18d8 (new config)
     decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "setName", data: BytesLike): Result;
     events: {};
@@ -45,40 +53,56 @@ export interface DefaultReverseResolver extends BaseContract {
     removeListener: OnEvent<this>;
     functions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<[string]>;
 =======
         ens(overrides?: CallOverrides): Promise<[string]>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<[string]>;
+>>>>>>> 2cef18d8 (new config)
         name(arg0: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<[string]>;
         setName(node: PromiseOrValue<BytesLike>, _name: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
     ans(overrides?: CallOverrides): Promise<string>;
 =======
     ens(overrides?: CallOverrides): Promise<string>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    ans(overrides?: CallOverrides): Promise<string>;
+>>>>>>> 2cef18d8 (new config)
     name(arg0: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<string>;
     setName(node: PromiseOrValue<BytesLike>, _name: PromiseOrValue<string>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
     callStatic: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<string>;
 =======
         ens(overrides?: CallOverrides): Promise<string>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<string>;
+>>>>>>> 2cef18d8 (new config)
         name(arg0: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<string>;
         setName(node: PromiseOrValue<BytesLike>, _name: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
     };
     filters: {};
     estimateGas: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<BigNumber>;
 =======
         ens(overrides?: CallOverrides): Promise<BigNumber>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<BigNumber>;
+>>>>>>> 2cef18d8 (new config)
         name(arg0: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<BigNumber>;
         setName(node: PromiseOrValue<BytesLike>, _name: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -86,10 +110,14 @@ export interface DefaultReverseResolver extends BaseContract {
     };
     populateTransaction: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 =======
         ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+>>>>>>> 2cef18d8 (new config)
         name(arg0: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         setName(node: PromiseOrValue<BytesLike>, _name: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;

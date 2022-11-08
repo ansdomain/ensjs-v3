@@ -10,10 +10,14 @@ export interface NameWrapperInterface extends utils.Interface {
         "balanceOfBatch(address[],uint256[])": FunctionFragment;
         "controllers(address)": FunctionFragment;
 <<<<<<< HEAD
+<<<<<<< HEAD
         "ans()": FunctionFragment;
 =======
         "ens()": FunctionFragment;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        "ans()": FunctionFragment;
+>>>>>>> 2cef18d8 (new config)
         "getData(uint256)": FunctionFragment;
         "isApprovedForAll(address,address)": FunctionFragment;
         "isTokenOwnerOrApproved(bytes32,address)": FunctionFragment;
@@ -68,18 +72,26 @@ export interface NameWrapperInterface extends utils.Interface {
         "wrap(bytes,address,address)": FunctionFragment;
         "wrapETH2LD(string,address,uint32,uint64,address)": FunctionFragment;
     };
+<<<<<<< HEAD
     getFunction(nameOrSignatureOrTopic: "_tokens" | "allFusesBurned" | "balanceOf" | "balanceOfBatch" | "controllers" | "ens" | "getData" | "isApprovedForAll" | "isTokenOwnerOrApproved" | "isWrapped" | "metadataService" | "name" | "names" | "onERC721Received" | "owner" | "ownerOf" | "recoverFunds" | "registerAndWrapETH2LD" | "registrar" | "renew" | "renounceOwnership" | "safeBatchTransferFrom" | "safeTransferFrom" | "setApprovalForAll" | "setChildFuses" | "setController" | "setFuses" | "setMetadataService" | "setRecord" | "setResolver" | "setSubnodeOwner" | "setSubnodeRecord" | "setTTL" | "setUpgradeContract" | "supportsInterface" | "transferOwnership" | "unwrap" | "unwrapETH2LD" | "upgrade" | "upgradeContract" | "upgradeETH2LD" | "uri" | "wrap" | "wrapETH2LD"): FunctionFragment;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    getFunction(nameOrSignatureOrTopic: "_tokens" | "allFusesBurned" | "balanceOf" | "balanceOfBatch" | "controllers" | "ans" | "getData" | "isApprovedForAll" | "isTokenOwnerOrApproved" | "isWrapped" | "metadataService" | "name" | "names" | "onERC721Received" | "owner" | "ownerOf" | "recoverFunds" | "registerAndWrapETH2LD" | "registrar" | "renew" | "renounceOwnership" | "safeBatchTransferFrom" | "safeTransferFrom" | "setApprovalForAll" | "setChildFuses" | "setController" | "setFuses" | "setMetadataService" | "setRecord" | "setResolver" | "setSubnodeOwner" | "setSubnodeRecord" | "setTTL" | "setUpgradeContract" | "supportsInterface" | "transferOwnership" | "unwrap" | "unwrapETH2LD" | "upgrade" | "upgradeContract" | "upgradeETH2LD" | "uri" | "wrap" | "wrapETH2LD"): FunctionFragment;
+>>>>>>> 2cef18d8 (new config)
     encodeFunctionData(functionFragment: "_tokens", values: [PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "allFusesBurned", values: [PromiseOrValue<BytesLike>, PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "balanceOf", values: [PromiseOrValue<string>, PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "balanceOfBatch", values: [PromiseOrValue<string>[], PromiseOrValue<BigNumberish>[]]): string;
     encodeFunctionData(functionFragment: "controllers", values: [PromiseOrValue<string>]): string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     encodeFunctionData(functionFragment: "ans", values?: undefined): string;
 =======
     encodeFunctionData(functionFragment: "ens", values?: undefined): string;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    encodeFunctionData(functionFragment: "ans", values?: undefined): string;
+>>>>>>> 2cef18d8 (new config)
     encodeFunctionData(functionFragment: "getData", values: [PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "isApprovedForAll", values: [PromiseOrValue<string>, PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "isTokenOwnerOrApproved", values: [PromiseOrValue<BytesLike>, PromiseOrValue<string>]): string;
@@ -224,10 +236,14 @@ export interface NameWrapperInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "balanceOfBatch", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "controllers", data: BytesLike): Result;
 <<<<<<< HEAD
+<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
 =======
     decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
+>>>>>>> 2cef18d8 (new config)
     decodeFunctionResult(functionFragment: "getData", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "isApprovedForAll", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "isTokenOwnerOrApproved", data: BytesLike): Result;
@@ -422,10 +438,14 @@ export interface NameWrapper extends BaseContract {
         balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<[BigNumber[]]>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<[string]>;
 =======
         ens(overrides?: CallOverrides): Promise<[string]>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<[string]>;
+>>>>>>> 2cef18d8 (new config)
         getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[string, number, BigNumber]>;
         isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
         isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
@@ -539,10 +559,14 @@ export interface NameWrapper extends BaseContract {
     balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<BigNumber[]>;
     controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     ans(overrides?: CallOverrides): Promise<string>;
 =======
     ens(overrides?: CallOverrides): Promise<string>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+    ans(overrides?: CallOverrides): Promise<string>;
+>>>>>>> 2cef18d8 (new config)
     getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[string, number, BigNumber]>;
     isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
     isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
@@ -654,10 +678,14 @@ export interface NameWrapper extends BaseContract {
         balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<BigNumber[]>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<string>;
 =======
         ens(overrides?: CallOverrides): Promise<string>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<string>;
+>>>>>>> 2cef18d8 (new config)
         getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[string, number, BigNumber]>;
         isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
         isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
@@ -738,10 +766,14 @@ export interface NameWrapper extends BaseContract {
         balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<BigNumber>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<BigNumber>;
 =======
         ens(overrides?: CallOverrides): Promise<BigNumber>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<BigNumber>;
+>>>>>>> 2cef18d8 (new config)
         getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
         isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
@@ -854,10 +886,14 @@ export interface NameWrapper extends BaseContract {
         balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<PopulatedTransaction>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 =======
         ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+        ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+>>>>>>> 2cef18d8 (new config)
         getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;

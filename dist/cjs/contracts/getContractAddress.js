@@ -24,6 +24,7 @@ module.exports = __toCommonJS(getContractAddress_exports);
 const addresses = {
   BaseRegistrarImplementation: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "1": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
     "3": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
     "4": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
@@ -94,26 +95,35 @@ const addresses = {
   }
 =======
     "1": "0x16Ac1fe465c9Db4FD65b3b034c11D56Feff8a3bD",
+=======
+    "421613": "0x16Ac1fe465c9Db4FD65b3b034c11D56Feff8a3bD"
+>>>>>>> 2cef18d8 (new config)
   },
   DNSRegistrar: {
-    "1": "0xbE894f57362c254dd705BCc6bb0F3369B1157083",
+    "421613": "0x46d40d5C0F904fdACcf3026cc1Ad1F73B534f7da"
   },
-  ETHRegistrarController: {
-    "1": "0xc6A70cd44B083c8Dc0AaD36381591675B0350D1B",
+  ARBRegistrarController: {
+    "421613": "0x0871715D6C47Fc5E24bfcE7F1A806069BF0bc778"
   },
   NameWrapper: {
-    "1": "0x5d8B78c65b4afdB0d8d5C30334b15c701513eB93",
+    "421613": "0x579DcA451111cB00Abc6b0E7550eD4d39Af51325"
   },
   PublicResolver: {
-    "1": "0x0A05D2bEc53BAd83CE8C2BEc9e2cB9dd43A12cf5",
+    "421613": "0x019788E4f12BaC446320cc58DE0Cb736F5BD2E2d"
   },
   ReverseRegistrar: {
-    "1": "0xeE99b526Bfa5d7Fc2F573EF33520Cddc5465faDf",
+    "421613": "0xAEf1423018fb9493B5795CbB902D86F5eF92439B"
   },
   UniversalResolver: {
-    "1": "0xBD2064e8075a62fCB71fD54B80Ff695e3a4a1F67",
+    "421613": "0x912ebA75244abe4A13eEaBDC420B9A48d8221D60"
   },
+<<<<<<< HEAD
 >>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
+=======
+  Multicall: "",
+  ENSRegistryWithFallback: "",
+  BulkRenewal: ""
+>>>>>>> 2cef18d8 (new config)
 };
 const getContractAddress = (networkId) => (contractName) => {
   try {
