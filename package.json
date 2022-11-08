@@ -1,6 +1,6 @@
 {
   "name": "@ansdomain/ensjs",
-  "version": "3.0.0-alpha.31",
+  "version": "3.0.0-alpha.336",
   "description": "ANS javascript library for contract interaction",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
@@ -106,9 +106,7 @@
     "tenv": "ens-test-env -a",
     "denv": "pnpm tenv start -ns -nb --extra-time 11368000",
     "generate-types": "ts-node scripts/runTypechain.ts",
-
     "pub": "yarn publish --access public",
-    
     "generate-abis": "hardhat export-abi",
     "enode": "ganache --wallet.mnemonic=\"test test test test test test test test test test test junk\" --chain.chainId 1337 --chain.networkId 1337 --chain.time 1663311099000",
     "ver": "pnpm version --no-workspaces-update"
