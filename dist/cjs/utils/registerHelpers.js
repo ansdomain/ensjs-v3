@@ -59,19 +59,11 @@ const makeCommitmentData = ({
   const fuseData = fuses ? (0, import_generateFuseInput.default)(fuses) : "0";
   if (reverseRecord) {
     if (!records) {
-<<<<<<< HEAD
       records = { coinTypes: [{ key: "ARB", value: owner }] };
     } else if (!records.coinTypes?.find((c) => c.key === "ARB")) {
       if (!records.coinTypes)
         records.coinTypes = [];
       records.coinTypes.push({ key: "ARB", value: owner });
-=======
-      records = { coinTypes: [{ key: "ETH", value: owner }] };
-    } else if (!records.coinTypes?.find((c) => c.key === "ETH")) {
-      if (!records.coinTypes)
-        records.coinTypes = [];
-      records.coinTypes.push({ key: "ETH", value: owner });
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     }
   }
   const data = records ? (0, import_recordHelpers.generateRecordCallArray)(hash, records, resolver) : [];

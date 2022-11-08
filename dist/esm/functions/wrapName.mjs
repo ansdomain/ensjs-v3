@@ -3,11 +3,7 @@ import { ethers } from "ethers";
 import generateFuseInput from "../utils/generateFuseInput.mjs";
 import { hexEncodeName } from "../utils/hexEncodedName.mjs";
 import { makeExpiry, wrappedLabelLengthCheck } from "../utils/wrapper.mjs";
-<<<<<<< HEAD
 async function wrapARB({ contracts }, labels, wrappedOwner, expiry, decodedFuses, resolverAddress, signer, address) {
-=======
-async function wrapETH({ contracts }, labels, wrappedOwner, expiry, decodedFuses, resolverAddress, signer, address) {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
   const nameWrapper = await contracts?.getNameWrapper();
   const baseRegistrar = (await contracts.getBaseRegistrar()).connect(signer);
   const labelhash = ethers.utils.solidityKeccak256(["string"], [labels[0]]);
@@ -75,11 +71,7 @@ async function wrapName_default({
       }
     }
     const expiryToUse = await makeExpiry({ getExpiry }, name, expiry);
-<<<<<<< HEAD
     return wrapARB(
-=======
-    return wrapETH(
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
       { contracts },
       labels,
       wrappedOwner,

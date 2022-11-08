@@ -23,8 +23,6 @@ __export(getContractAddress_exports, {
 module.exports = __toCommonJS(getContractAddress_exports);
 const addresses = {
   BaseRegistrarImplementation: {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "1": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
     "3": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
     "4": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
@@ -93,37 +91,6 @@ const addresses = {
     
     "421613": "0x7726eE45ce1E8323A672C6226CfA2Ab068Ed9C9b"
   }
-=======
-    "1": "0x16Ac1fe465c9Db4FD65b3b034c11D56Feff8a3bD",
-=======
-    "421613": "0x16Ac1fe465c9Db4FD65b3b034c11D56Feff8a3bD"
->>>>>>> 2cef18d8 (new config)
-  },
-  DNSRegistrar: {
-    "421613": "0x46d40d5C0F904fdACcf3026cc1Ad1F73B534f7da"
-  },
-  ARBRegistrarController: {
-    "421613": "0x0871715D6C47Fc5E24bfcE7F1A806069BF0bc778"
-  },
-  NameWrapper: {
-    "421613": "0x579DcA451111cB00Abc6b0E7550eD4d39Af51325"
-  },
-  PublicResolver: {
-    "421613": "0x019788E4f12BaC446320cc58DE0Cb736F5BD2E2d"
-  },
-  ReverseRegistrar: {
-    "421613": "0xAEf1423018fb9493B5795CbB902D86F5eF92439B"
-  },
-  UniversalResolver: {
-    "421613": "0x912ebA75244abe4A13eEaBDC420B9A48d8221D60"
-  },
-<<<<<<< HEAD
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-  Multicall: "",
-  ENSRegistryWithFallback: "",
-  BulkRenewal: ""
->>>>>>> 2cef18d8 (new config)
 };
 const getContractAddress = (networkId) => (contractName) => {
   try {

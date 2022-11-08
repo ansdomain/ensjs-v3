@@ -28,15 +28,7 @@ __export(contracts_exports, {
 });
 module.exports = __toCommonJS(contracts_exports);
 var import_baseRegistrar = __toESM(require("./baseRegistrar"));
-<<<<<<< HEAD
-<<<<<<< HEAD
 var import_arbRegistrarController = __toESM(require("./arbRegistrarController"));
-=======
-var import_ethRegistrarController = __toESM(require("./ethRegistrarController"));
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-var import_arbRegistrarController = __toESM(require("./arbRegistrarController"));
->>>>>>> 2cef18d8 (new config)
 var import_multicall = __toESM(require("./multicall"));
 var import_nameWrapper = __toESM(require("./nameWrapper"));
 var import_dnsRegistrar = __toESM(require("./dnsRegistrar"));
@@ -68,11 +60,7 @@ class ContractManager {
     import_universalResolver.default
   );
   getRegistry = this.generateContractGetter(
-<<<<<<< HEAD
     "ANSRegistry",
-=======
-    "ENSRegistryWithFallback",
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     import_registry.default
   );
   getReverseRegistrar = this.generateContractGetter(
@@ -91,21 +79,9 @@ class ContractManager {
     "BaseRegistrarImplementation",
     import_baseRegistrar.default
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
   getArbRegistrarController = this.generateContractGetter(
     "ARBRegistrarController",
     import_arbRegistrarController.default
-=======
-  getEthRegistrarController = this.generateContractGetter(
-    "ETHRegistrarController",
-    import_ethRegistrarController.default
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-  getArbRegistrarController = this.generateContractGetter(
-    "ARBRegistrarController",
-    import_arbRegistrarController.default
->>>>>>> 2cef18d8 (new config)
   );
   getMulticall = this.generateContractGetter("Multicall", import_multicall.default);
   getBulkRenewal = this.generateContractGetter(

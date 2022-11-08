@@ -13,11 +13,7 @@ async function unwrapName_default({ contracts, signer }, name, {
     if (!newRegistrant) {
       throw new Error("newRegistrant must be specified for .arb names");
     }
-<<<<<<< HEAD
     return nameWrapper.populateTransaction.unwrapARB2LD(
-=======
-    return nameWrapper.populateTransaction.unwrapETH2LD(
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
       labelhash,
       newRegistrant,
       newController

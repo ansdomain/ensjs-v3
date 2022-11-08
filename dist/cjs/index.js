@@ -33,21 +33,12 @@ var import_GqlManager = __toESM(require("./GqlManager"));
 var import_singleCall = __toESM(require("./utils/singleCall"));
 var import_writeTx = __toESM(require("./utils/writeTx"));
 const graphURIEndpoints = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   1: "https://api.thegraph.com/subgraphs/name/ensdomains/ens",
   3: "https://api.thegraph.com/subgraphs/name/ensdomains/ensropsten",
   4: "https://api.thegraph.com/subgraphs/name/ensdomains/ensrinkeby",
   5: "https://api.thegraph.com/subgraphs/name/ensdomains/ensgoerli",
   421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testnet-subgraph"
 };
-=======
-  421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testns-subgraph",
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-  421613: "https://api.thegraph.com/subgraphs/name/ansdomain/testns-subgraph"
-};
->>>>>>> 2cef18d8 (new config)
 class ANS {
   options;
   provider;
@@ -166,15 +157,9 @@ class ANS {
     );
   };
   withProvider = (provider) => {
-<<<<<<< HEAD
     const newANS = new ANS(this.options);
     newANS.initialProvider = provider;
     return newANS;
-=======
-    const newENS = new ANS(this.options);
-    newENS.initialProvider = provider;
-    return newENS;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
   };
   batch = this.generateRawFunction(
     "initialGetters",

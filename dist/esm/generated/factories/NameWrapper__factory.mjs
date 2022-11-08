@@ -12,11 +12,7 @@ var _abi = [
     inputs: [
       {
         internalType: "contract ANS",
-<<<<<<< HEAD
         name: "_ans",
-=======
-        name: "_ens",
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         type: "address"
       },
       {
@@ -467,15 +463,7 @@ var _abi = [
   },
   {
     inputs: [],
-<<<<<<< HEAD
-<<<<<<< HEAD
     name: "ans",
-=======
-    name: "ens",
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-    name: "ans",
->>>>>>> 2cef18d8 (new config)
     outputs: [
       {
         internalType: "contract ANS",
@@ -749,11 +737,7 @@ var _abi = [
         type: "uint64"
       }
     ],
-<<<<<<< HEAD
     name: "registerAndWrapARB2LD",
-=======
-    name: "registerAndWrapETH2LD",
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     outputs: [
       {
         internalType: "uint256",
@@ -1223,11 +1207,7 @@ var _abi = [
         type: "address"
       }
     ],
-<<<<<<< HEAD
     name: "unwrapARB2LD",
-=======
-    name: "unwrapETH2LD",
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     outputs: [],
     stateMutability: "nonpayable",
     type: "function"
@@ -1291,11 +1271,7 @@ var _abi = [
         type: "address"
       }
     ],
-<<<<<<< HEAD
     name: "upgradeARB2LD",
-=======
-    name: "upgradeETH2LD",
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     outputs: [],
     stateMutability: "nonpayable",
     type: "function"
@@ -1370,11 +1346,7 @@ var _abi = [
         type: "address"
       }
     ],
-<<<<<<< HEAD
     name: "wrapARB2LD",
-=======
-    name: "wrapETH2LD",
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     outputs: [
       {
         internalType: "uint64",

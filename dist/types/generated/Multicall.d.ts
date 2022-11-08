@@ -56,20 +56,12 @@ export interface MulticallInterface extends utils.Interface {
         "getCurrentBlockDifficulty()": FunctionFragment;
         "getCurrentBlockGasLimit()": FunctionFragment;
         "getCurrentBlockTimestamp()": FunctionFragment;
-<<<<<<< HEAD
         "getArbBalance(address)": FunctionFragment;
-=======
-        "getEthBalance(address)": FunctionFragment;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         "getLastBlockHash()": FunctionFragment;
         "tryAggregate(bool,(address,bytes)[])": FunctionFragment;
         "tryBlockAndAggregate(bool,(address,bytes)[])": FunctionFragment;
     };
-<<<<<<< HEAD
     getFunction(nameOrSignatureOrTopic: "aggregate" | "aggregate3" | "aggregate3Value" | "blockAndAggregate" | "getBasefee" | "getBlockHash" | "getBlockNumber" | "getChainId" | "getCurrentBlockCoinbase" | "getCurrentBlockDifficulty" | "getCurrentBlockGasLimit" | "getCurrentBlockTimestamp" | "getArbBalance" | "getLastBlockHash" | "tryAggregate" | "tryBlockAndAggregate"): FunctionFragment;
-=======
-    getFunction(nameOrSignatureOrTopic: "aggregate" | "aggregate3" | "aggregate3Value" | "blockAndAggregate" | "getBasefee" | "getBlockHash" | "getBlockNumber" | "getChainId" | "getCurrentBlockCoinbase" | "getCurrentBlockDifficulty" | "getCurrentBlockGasLimit" | "getCurrentBlockTimestamp" | "getEthBalance" | "getLastBlockHash" | "tryAggregate" | "tryBlockAndAggregate"): FunctionFragment;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     encodeFunctionData(functionFragment: "aggregate", values: [Multicall3.CallStruct[]]): string;
     encodeFunctionData(functionFragment: "aggregate3", values: [Multicall3.Call3Struct[]]): string;
     encodeFunctionData(functionFragment: "aggregate3Value", values: [Multicall3.Call3ValueStruct[]]): string;
@@ -82,11 +74,7 @@ export interface MulticallInterface extends utils.Interface {
     encodeFunctionData(functionFragment: "getCurrentBlockDifficulty", values?: undefined): string;
     encodeFunctionData(functionFragment: "getCurrentBlockGasLimit", values?: undefined): string;
     encodeFunctionData(functionFragment: "getCurrentBlockTimestamp", values?: undefined): string;
-<<<<<<< HEAD
     encodeFunctionData(functionFragment: "getArbBalance", values: [PromiseOrValue<string>]): string;
-=======
-    encodeFunctionData(functionFragment: "getEthBalance", values: [PromiseOrValue<string>]): string;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     encodeFunctionData(functionFragment: "getLastBlockHash", values?: undefined): string;
     encodeFunctionData(functionFragment: "tryAggregate", values: [PromiseOrValue<boolean>, Multicall3.CallStruct[]]): string;
     encodeFunctionData(functionFragment: "tryBlockAndAggregate", values: [PromiseOrValue<boolean>, Multicall3.CallStruct[]]): string;
@@ -102,11 +90,7 @@ export interface MulticallInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "getCurrentBlockDifficulty", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "getCurrentBlockGasLimit", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "getCurrentBlockTimestamp", data: BytesLike): Result;
-<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "getArbBalance", data: BytesLike): Result;
-=======
-    decodeFunctionResult(functionFragment: "getEthBalance", data: BytesLike): Result;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     decodeFunctionResult(functionFragment: "getLastBlockHash", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "tryAggregate", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "tryBlockAndAggregate", data: BytesLike): Result;
@@ -163,11 +147,7 @@ export interface Multicall extends BaseContract {
         getCurrentBlockTimestamp(overrides?: CallOverrides): Promise<[BigNumber] & {
             timestamp: BigNumber;
         }>;
-<<<<<<< HEAD
         getArbBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[BigNumber] & {
-=======
-        getEthBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[BigNumber] & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             balance: BigNumber;
         }>;
         getLastBlockHash(overrides?: CallOverrides): Promise<[string] & {
@@ -200,11 +180,7 @@ export interface Multicall extends BaseContract {
     getCurrentBlockDifficulty(overrides?: CallOverrides): Promise<BigNumber>;
     getCurrentBlockGasLimit(overrides?: CallOverrides): Promise<BigNumber>;
     getCurrentBlockTimestamp(overrides?: CallOverrides): Promise<BigNumber>;
-<<<<<<< HEAD
     getArbBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
-=======
-    getEthBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     getLastBlockHash(overrides?: CallOverrides): Promise<string>;
     tryAggregate(requireSuccess: PromiseOrValue<boolean>, calls: Multicall3.CallStruct[], overrides?: PayableOverrides & {
         from?: PromiseOrValue<string>;
@@ -239,11 +215,7 @@ export interface Multicall extends BaseContract {
         getCurrentBlockDifficulty(overrides?: CallOverrides): Promise<BigNumber>;
         getCurrentBlockGasLimit(overrides?: CallOverrides): Promise<BigNumber>;
         getCurrentBlockTimestamp(overrides?: CallOverrides): Promise<BigNumber>;
-<<<<<<< HEAD
         getArbBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
-=======
-        getEthBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         getLastBlockHash(overrides?: CallOverrides): Promise<string>;
         tryAggregate(requireSuccess: PromiseOrValue<boolean>, calls: Multicall3.CallStruct[], overrides?: CallOverrides): Promise<Multicall3.ResultStructOutput[]>;
         tryBlockAndAggregate(requireSuccess: PromiseOrValue<boolean>, calls: Multicall3.CallStruct[], overrides?: CallOverrides): Promise<[
@@ -278,11 +250,7 @@ export interface Multicall extends BaseContract {
         getCurrentBlockDifficulty(overrides?: CallOverrides): Promise<BigNumber>;
         getCurrentBlockGasLimit(overrides?: CallOverrides): Promise<BigNumber>;
         getCurrentBlockTimestamp(overrides?: CallOverrides): Promise<BigNumber>;
-<<<<<<< HEAD
         getArbBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
-=======
-        getEthBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         getLastBlockHash(overrides?: CallOverrides): Promise<BigNumber>;
         tryAggregate(requireSuccess: PromiseOrValue<boolean>, calls: Multicall3.CallStruct[], overrides?: PayableOverrides & {
             from?: PromiseOrValue<string>;
@@ -312,11 +280,7 @@ export interface Multicall extends BaseContract {
         getCurrentBlockDifficulty(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         getCurrentBlockGasLimit(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         getCurrentBlockTimestamp(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-<<<<<<< HEAD
         getArbBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-=======
-        getEthBalance(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         getLastBlockHash(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         tryAggregate(requireSuccess: PromiseOrValue<boolean>, calls: Multicall3.CallStruct[], overrides?: PayableOverrides & {
             from?: PromiseOrValue<string>;

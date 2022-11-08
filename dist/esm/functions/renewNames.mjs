@@ -12,15 +12,7 @@ async function renewNameWithData({ contracts }, name, {
     throw new Error("Currently only .arb TLD renewals are supported");
   }
   const encodedFuses = fuses ? validateFuses(fuses) : 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
   const controller = await contracts.getArbRegistrarController();
-=======
-  const controller = await contracts.getEthRegistrarController();
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-  const controller = await contracts.getArbRegistrarController();
->>>>>>> 2cef18d8 (new config)
   return controller.populateTransaction.renewWithFuses(
     labels[0],
     duration,
@@ -39,15 +31,7 @@ async function renewNames_default({ contracts }, nameOrNames, { duration, value 
     return label[0];
   });
   if (labels.length === 1) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const controller = await contracts.getArbRegistrarController();
-=======
-    const controller = await contracts.getEthRegistrarController();
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-    const controller = await contracts.getArbRegistrarController();
->>>>>>> 2cef18d8 (new config)
     return controller.populateTransaction.renew(labels[0], duration, { value });
   }
   const bulkRenewal = await contracts.getBulkRenewal();

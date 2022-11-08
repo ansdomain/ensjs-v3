@@ -31,11 +31,7 @@ var import_ethers = require("ethers");
 var import_generateFuseInput = __toESM(require("../utils/generateFuseInput"));
 var import_hexEncodedName = require("../utils/hexEncodedName");
 var import_wrapper = require("../utils/wrapper");
-<<<<<<< HEAD
 async function wrapARB({ contracts }, labels, wrappedOwner, expiry, decodedFuses, resolverAddress, signer, address) {
-=======
-async function wrapETH({ contracts }, labels, wrappedOwner, expiry, decodedFuses, resolverAddress, signer, address) {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
   const nameWrapper = await contracts?.getNameWrapper();
   const baseRegistrar = (await contracts.getBaseRegistrar()).connect(signer);
   const labelhash = import_ethers.ethers.utils.solidityKeccak256(["string"], [labels[0]]);
@@ -103,11 +99,7 @@ async function wrapName_default({
       }
     }
     const expiryToUse = await (0, import_wrapper.makeExpiry)({ getExpiry }, name, expiry);
-<<<<<<< HEAD
     return wrapARB(
-=======
-    return wrapETH(
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
       { contracts },
       labels,
       wrappedOwner,

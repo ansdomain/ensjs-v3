@@ -1,5 +1,4 @@
 import { ethers } from 'ethers';
-<<<<<<< HEAD
 import { ANSArgs } from '..';
 export declare const universalWrapper: {
     raw: ({ contracts }: ANSArgs<'contracts'>, name: string, data: string) => Promise<{
@@ -7,32 +6,18 @@ export declare const universalWrapper: {
         data: string;
     }>;
     decode: ({ contracts }: ANSArgs<'contracts'>, data: string) => Promise<{
-=======
-import { ENSArgs } from '..';
-export declare const universalWrapper: {
-    raw: ({ contracts }: ENSArgs<'contracts'>, name: string, data: string) => Promise<{
-        to: string;
-        data: string;
-    }>;
-    decode: ({ contracts }: ENSArgs<'contracts'>, data: string) => Promise<{
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         data: any;
         resolver: any;
     } | undefined>;
 };
 export declare const resolverMulticallWrapper: {
-<<<<<<< HEAD
     raw: ({ contracts }: ANSArgs<'contracts'>, data: {
-=======
-    raw: ({ contracts }: ENSArgs<'contracts'>, data: {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         to: string;
         data: string;
     }[]) => Promise<{
         to: string;
         data: string;
     }>;
-<<<<<<< HEAD
     decode: ({ contracts }: ANSArgs<'contracts'>, data: string) => Promise<ethers.utils.Result | undefined>;
 };
 export declare const multicallWrapper: {
@@ -41,16 +26,6 @@ export declare const multicallWrapper: {
         data: string;
     }>;
     decode({ contracts, provider }: ANSArgs<'contracts' | 'provider'>, data: string, transactions: ethers.providers.TransactionRequest[]): Promise<{
-=======
-    decode: ({ contracts }: ENSArgs<'contracts'>, data: string) => Promise<ethers.utils.Result | undefined>;
-};
-export declare const multicallWrapper: {
-    raw({ contracts }: ENSArgs<'contracts'>, transactions: ethers.providers.TransactionRequest[], requireSuccess?: boolean): Promise<{
-        to: string;
-        data: string;
-    }>;
-    decode({ contracts, provider }: ENSArgs<'contracts' | 'provider'>, data: string, transactions: ethers.providers.TransactionRequest[]): Promise<{
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         success: boolean;
         returnData: string;
         0: boolean;

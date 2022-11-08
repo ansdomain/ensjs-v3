@@ -9,15 +9,7 @@ export interface NameWrapperInterface extends utils.Interface {
         "balanceOf(address,uint256)": FunctionFragment;
         "balanceOfBatch(address[],uint256[])": FunctionFragment;
         "controllers(address)": FunctionFragment;
-<<<<<<< HEAD
-<<<<<<< HEAD
         "ans()": FunctionFragment;
-=======
-        "ens()": FunctionFragment;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-        "ans()": FunctionFragment;
->>>>>>> 2cef18d8 (new config)
         "getData(uint256)": FunctionFragment;
         "isApprovedForAll(address,address)": FunctionFragment;
         "isTokenOwnerOrApproved(bytes32,address)": FunctionFragment;
@@ -29,11 +21,7 @@ export interface NameWrapperInterface extends utils.Interface {
         "owner()": FunctionFragment;
         "ownerOf(uint256)": FunctionFragment;
         "recoverFunds(address,address,uint256)": FunctionFragment;
-<<<<<<< HEAD
         "registerAndWrapARB2LD(string,address,uint256,address,uint32,uint64)": FunctionFragment;
-=======
-        "registerAndWrapETH2LD(string,address,uint256,address,uint32,uint64)": FunctionFragment;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         "registrar()": FunctionFragment;
         "renew(uint256,uint256,uint32,uint64)": FunctionFragment;
         "renounceOwnership()": FunctionFragment;
@@ -53,7 +41,6 @@ export interface NameWrapperInterface extends utils.Interface {
         "supportsInterface(bytes4)": FunctionFragment;
         "transferOwnership(address)": FunctionFragment;
         "unwrap(bytes32,bytes32,address)": FunctionFragment;
-<<<<<<< HEAD
         "unwrapARB2LD(bytes32,address,address)": FunctionFragment;
         "upgrade(bytes32,string,address,address)": FunctionFragment;
         "upgradeContract()": FunctionFragment;
@@ -63,35 +50,12 @@ export interface NameWrapperInterface extends utils.Interface {
         "wrapARB2LD(string,address,uint32,uint64,address)": FunctionFragment;
     };
     getFunction(nameOrSignatureOrTopic: "_tokens" | "allFusesBurned" | "balanceOf" | "balanceOfBatch" | "controllers" | "ans" | "getData" | "isApprovedForAll" | "isTokenOwnerOrApproved" | "isWrapped" | "metadataService" | "name" | "names" | "onERC721Received" | "owner" | "ownerOf" | "recoverFunds" | "registerAndWrapARB2LD" | "registrar" | "renew" | "renounceOwnership" | "safeBatchTransferFrom" | "safeTransferFrom" | "setApprovalForAll" | "setChildFuses" | "setController" | "setFuses" | "setMetadataService" | "setRecord" | "setResolver" | "setSubnodeOwner" | "setSubnodeRecord" | "setTTL" | "setUpgradeContract" | "supportsInterface" | "transferOwnership" | "unwrap" | "unwrapARB2LD" | "upgrade" | "upgradeContract" | "upgradeARB2LD" | "uri" | "wrap" | "wrapARB2LD"): FunctionFragment;
-=======
-        "unwrapETH2LD(bytes32,address,address)": FunctionFragment;
-        "upgrade(bytes32,string,address,address)": FunctionFragment;
-        "upgradeContract()": FunctionFragment;
-        "upgradeETH2LD(string,address,address)": FunctionFragment;
-        "uri(uint256)": FunctionFragment;
-        "wrap(bytes,address,address)": FunctionFragment;
-        "wrapETH2LD(string,address,uint32,uint64,address)": FunctionFragment;
-    };
-<<<<<<< HEAD
-    getFunction(nameOrSignatureOrTopic: "_tokens" | "allFusesBurned" | "balanceOf" | "balanceOfBatch" | "controllers" | "ens" | "getData" | "isApprovedForAll" | "isTokenOwnerOrApproved" | "isWrapped" | "metadataService" | "name" | "names" | "onERC721Received" | "owner" | "ownerOf" | "recoverFunds" | "registerAndWrapETH2LD" | "registrar" | "renew" | "renounceOwnership" | "safeBatchTransferFrom" | "safeTransferFrom" | "setApprovalForAll" | "setChildFuses" | "setController" | "setFuses" | "setMetadataService" | "setRecord" | "setResolver" | "setSubnodeOwner" | "setSubnodeRecord" | "setTTL" | "setUpgradeContract" | "supportsInterface" | "transferOwnership" | "unwrap" | "unwrapETH2LD" | "upgrade" | "upgradeContract" | "upgradeETH2LD" | "uri" | "wrap" | "wrapETH2LD"): FunctionFragment;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-    getFunction(nameOrSignatureOrTopic: "_tokens" | "allFusesBurned" | "balanceOf" | "balanceOfBatch" | "controllers" | "ans" | "getData" | "isApprovedForAll" | "isTokenOwnerOrApproved" | "isWrapped" | "metadataService" | "name" | "names" | "onERC721Received" | "owner" | "ownerOf" | "recoverFunds" | "registerAndWrapETH2LD" | "registrar" | "renew" | "renounceOwnership" | "safeBatchTransferFrom" | "safeTransferFrom" | "setApprovalForAll" | "setChildFuses" | "setController" | "setFuses" | "setMetadataService" | "setRecord" | "setResolver" | "setSubnodeOwner" | "setSubnodeRecord" | "setTTL" | "setUpgradeContract" | "supportsInterface" | "transferOwnership" | "unwrap" | "unwrapETH2LD" | "upgrade" | "upgradeContract" | "upgradeETH2LD" | "uri" | "wrap" | "wrapETH2LD"): FunctionFragment;
->>>>>>> 2cef18d8 (new config)
     encodeFunctionData(functionFragment: "_tokens", values: [PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "allFusesBurned", values: [PromiseOrValue<BytesLike>, PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "balanceOf", values: [PromiseOrValue<string>, PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "balanceOfBatch", values: [PromiseOrValue<string>[], PromiseOrValue<BigNumberish>[]]): string;
     encodeFunctionData(functionFragment: "controllers", values: [PromiseOrValue<string>]): string;
-<<<<<<< HEAD
-<<<<<<< HEAD
     encodeFunctionData(functionFragment: "ans", values?: undefined): string;
-=======
-    encodeFunctionData(functionFragment: "ens", values?: undefined): string;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-    encodeFunctionData(functionFragment: "ans", values?: undefined): string;
->>>>>>> 2cef18d8 (new config)
     encodeFunctionData(functionFragment: "getData", values: [PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "isApprovedForAll", values: [PromiseOrValue<string>, PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "isTokenOwnerOrApproved", values: [PromiseOrValue<BytesLike>, PromiseOrValue<string>]): string;
@@ -112,11 +76,7 @@ export interface NameWrapperInterface extends utils.Interface {
         PromiseOrValue<string>,
         PromiseOrValue<BigNumberish>
     ]): string;
-<<<<<<< HEAD
     encodeFunctionData(functionFragment: "registerAndWrapARB2LD", values: [
-=======
-    encodeFunctionData(functionFragment: "registerAndWrapETH2LD", values: [
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         PromiseOrValue<string>,
         PromiseOrValue<string>,
         PromiseOrValue<BigNumberish>,
@@ -188,11 +148,7 @@ export interface NameWrapperInterface extends utils.Interface {
         PromiseOrValue<BytesLike>,
         PromiseOrValue<string>
     ]): string;
-<<<<<<< HEAD
     encodeFunctionData(functionFragment: "unwrapARB2LD", values: [
-=======
-    encodeFunctionData(functionFragment: "unwrapETH2LD", values: [
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         PromiseOrValue<BytesLike>,
         PromiseOrValue<string>,
         PromiseOrValue<string>
@@ -204,11 +160,7 @@ export interface NameWrapperInterface extends utils.Interface {
         PromiseOrValue<string>
     ]): string;
     encodeFunctionData(functionFragment: "upgradeContract", values?: undefined): string;
-<<<<<<< HEAD
     encodeFunctionData(functionFragment: "upgradeARB2LD", values: [
-=======
-    encodeFunctionData(functionFragment: "upgradeETH2LD", values: [
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         PromiseOrValue<string>,
         PromiseOrValue<string>,
         PromiseOrValue<string>
@@ -219,11 +171,7 @@ export interface NameWrapperInterface extends utils.Interface {
         PromiseOrValue<string>,
         PromiseOrValue<string>
     ]): string;
-<<<<<<< HEAD
     encodeFunctionData(functionFragment: "wrapARB2LD", values: [
-=======
-    encodeFunctionData(functionFragment: "wrapETH2LD", values: [
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         PromiseOrValue<string>,
         PromiseOrValue<string>,
         PromiseOrValue<BigNumberish>,
@@ -235,15 +183,7 @@ export interface NameWrapperInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "balanceOfBatch", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "controllers", data: BytesLike): Result;
-<<<<<<< HEAD
-<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
-=======
-    decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-    decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
->>>>>>> 2cef18d8 (new config)
     decodeFunctionResult(functionFragment: "getData", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "isApprovedForAll", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "isTokenOwnerOrApproved", data: BytesLike): Result;
@@ -255,11 +195,7 @@ export interface NameWrapperInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "ownerOf", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "recoverFunds", data: BytesLike): Result;
-<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "registerAndWrapARB2LD", data: BytesLike): Result;
-=======
-    decodeFunctionResult(functionFragment: "registerAndWrapETH2LD", data: BytesLike): Result;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     decodeFunctionResult(functionFragment: "registrar", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "renew", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "renounceOwnership", data: BytesLike): Result;
@@ -279,7 +215,6 @@ export interface NameWrapperInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "supportsInterface", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "transferOwnership", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "unwrap", data: BytesLike): Result;
-<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "unwrapARB2LD", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "upgrade", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "upgradeContract", data: BytesLike): Result;
@@ -287,15 +222,6 @@ export interface NameWrapperInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "uri", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "wrap", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "wrapARB2LD", data: BytesLike): Result;
-=======
-    decodeFunctionResult(functionFragment: "unwrapETH2LD", data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: "upgrade", data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: "upgradeContract", data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: "upgradeETH2LD", data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: "uri", data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: "wrap", data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: "wrapETH2LD", data: BytesLike): Result;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     events: {
         "ApprovalForAll(address,address,bool)": EventFragment;
         "ControllerChanged(address,bool)": EventFragment;
@@ -437,15 +363,7 @@ export interface NameWrapper extends BaseContract {
         balanceOf(account: PromiseOrValue<string>, id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[BigNumber]>;
         balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<[BigNumber[]]>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<[string]>;
-=======
-        ens(overrides?: CallOverrides): Promise<[string]>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-        ans(overrides?: CallOverrides): Promise<[string]>;
->>>>>>> 2cef18d8 (new config)
         getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[string, number, BigNumber]>;
         isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
         isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
@@ -463,11 +381,7 @@ export interface NameWrapper extends BaseContract {
         recoverFunds(_token: PromiseOrValue<string>, _to: PromiseOrValue<string>, _amount: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
-<<<<<<< HEAD
         registerAndWrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
-=======
-        registerAndWrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
         registrar(overrides?: CallOverrides): Promise<[string]>;
@@ -523,33 +437,21 @@ export interface NameWrapper extends BaseContract {
         unwrap(parentNode: PromiseOrValue<BytesLike>, labelhash: PromiseOrValue<BytesLike>, controller: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
-<<<<<<< HEAD
         unwrapARB2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        unwrapETH2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
         upgrade(parentNode: PromiseOrValue<BytesLike>, label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
         upgradeContract(overrides?: CallOverrides): Promise<[string]>;
-<<<<<<< HEAD
         upgradeARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        upgradeETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
         uri(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[string]>;
         wrap(name: PromiseOrValue<BytesLike>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
-<<<<<<< HEAD
         wrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        wrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<ContractTransaction>;
     };
@@ -558,15 +460,7 @@ export interface NameWrapper extends BaseContract {
     balanceOf(account: PromiseOrValue<string>, id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
     balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<BigNumber[]>;
     controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     ans(overrides?: CallOverrides): Promise<string>;
-=======
-    ens(overrides?: CallOverrides): Promise<string>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-    ans(overrides?: CallOverrides): Promise<string>;
->>>>>>> 2cef18d8 (new config)
     getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[string, number, BigNumber]>;
     isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
     isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
@@ -582,11 +476,7 @@ export interface NameWrapper extends BaseContract {
     recoverFunds(_token: PromiseOrValue<string>, _to: PromiseOrValue<string>, _amount: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
-<<<<<<< HEAD
     registerAndWrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
-=======
-    registerAndWrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
     registrar(overrides?: CallOverrides): Promise<string>;
@@ -642,33 +532,21 @@ export interface NameWrapper extends BaseContract {
     unwrap(parentNode: PromiseOrValue<BytesLike>, labelhash: PromiseOrValue<BytesLike>, controller: PromiseOrValue<string>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
-<<<<<<< HEAD
     unwrapARB2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-    unwrapETH2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
     upgrade(parentNode: PromiseOrValue<BytesLike>, label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
     upgradeContract(overrides?: CallOverrides): Promise<string>;
-<<<<<<< HEAD
     upgradeARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-    upgradeETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
     uri(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<string>;
     wrap(name: PromiseOrValue<BytesLike>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
-<<<<<<< HEAD
     wrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-    wrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         from?: PromiseOrValue<string>;
     }): Promise<ContractTransaction>;
     callStatic: {
@@ -677,15 +555,7 @@ export interface NameWrapper extends BaseContract {
         balanceOf(account: PromiseOrValue<string>, id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<BigNumber[]>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<string>;
-=======
-        ens(overrides?: CallOverrides): Promise<string>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-        ans(overrides?: CallOverrides): Promise<string>;
->>>>>>> 2cef18d8 (new config)
         getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[string, number, BigNumber]>;
         isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
         isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
@@ -697,11 +567,7 @@ export interface NameWrapper extends BaseContract {
         owner(overrides?: CallOverrides): Promise<string>;
         ownerOf(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<string>;
         recoverFunds(_token: PromiseOrValue<string>, _to: PromiseOrValue<string>, _amount: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<void>;
-<<<<<<< HEAD
         registerAndWrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
-=======
-        registerAndWrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         registrar(overrides?: CallOverrides): Promise<string>;
         renew(tokenId: PromiseOrValue<BigNumberish>, duration: PromiseOrValue<BigNumberish>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         renounceOwnership(overrides?: CallOverrides): Promise<void>;
@@ -721,7 +587,6 @@ export interface NameWrapper extends BaseContract {
         supportsInterface(interfaceId: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<boolean>;
         transferOwnership(newOwner: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
         unwrap(parentNode: PromiseOrValue<BytesLike>, labelhash: PromiseOrValue<BytesLike>, controller: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
-<<<<<<< HEAD
         unwrapARB2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
         upgrade(parentNode: PromiseOrValue<BytesLike>, label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
         upgradeContract(overrides?: CallOverrides): Promise<string>;
@@ -729,15 +594,6 @@ export interface NameWrapper extends BaseContract {
         uri(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<string>;
         wrap(name: PromiseOrValue<BytesLike>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
         wrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
-=======
-        unwrapETH2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
-        upgrade(parentNode: PromiseOrValue<BytesLike>, label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
-        upgradeContract(overrides?: CallOverrides): Promise<string>;
-        upgradeETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
-        uri(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<string>;
-        wrap(name: PromiseOrValue<BytesLike>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: CallOverrides): Promise<void>;
-        wrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     };
     filters: {
         "ApprovalForAll(address,address,bool)"(account?: PromiseOrValue<string> | null, operator?: PromiseOrValue<string> | null, approved?: null): ApprovalForAllEventFilter;
@@ -765,15 +621,7 @@ export interface NameWrapper extends BaseContract {
         balanceOf(account: PromiseOrValue<string>, id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<BigNumber>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<BigNumber>;
-=======
-        ens(overrides?: CallOverrides): Promise<BigNumber>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-        ans(overrides?: CallOverrides): Promise<BigNumber>;
->>>>>>> 2cef18d8 (new config)
         getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
         isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
@@ -789,11 +637,7 @@ export interface NameWrapper extends BaseContract {
         recoverFunds(_token: PromiseOrValue<string>, _to: PromiseOrValue<string>, _amount: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
-<<<<<<< HEAD
         registerAndWrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
-=======
-        registerAndWrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
         registrar(overrides?: CallOverrides): Promise<BigNumber>;
@@ -849,33 +693,21 @@ export interface NameWrapper extends BaseContract {
         unwrap(parentNode: PromiseOrValue<BytesLike>, labelhash: PromiseOrValue<BytesLike>, controller: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
-<<<<<<< HEAD
         unwrapARB2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        unwrapETH2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
         upgrade(parentNode: PromiseOrValue<BytesLike>, label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
         upgradeContract(overrides?: CallOverrides): Promise<BigNumber>;
-<<<<<<< HEAD
         upgradeARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        upgradeETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
         uri(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         wrap(name: PromiseOrValue<BytesLike>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
-<<<<<<< HEAD
         wrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        wrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<BigNumber>;
     };
@@ -885,15 +717,7 @@ export interface NameWrapper extends BaseContract {
         balanceOf(account: PromiseOrValue<string>, id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         balanceOfBatch(accounts: PromiseOrValue<string>[], ids: PromiseOrValue<BigNumberish>[], overrides?: CallOverrides): Promise<PopulatedTransaction>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-=======
-        ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
-=======
-        ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
->>>>>>> 2cef18d8 (new config)
         getData(id: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         isApprovedForAll(account: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         isTokenOwnerOrApproved(node: PromiseOrValue<BytesLike>, addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -909,11 +733,7 @@ export interface NameWrapper extends BaseContract {
         recoverFunds(_token: PromiseOrValue<string>, _to: PromiseOrValue<string>, _amount: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
-<<<<<<< HEAD
         registerAndWrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
-=======
-        registerAndWrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, duration: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
         registrar(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -969,33 +789,21 @@ export interface NameWrapper extends BaseContract {
         unwrap(parentNode: PromiseOrValue<BytesLike>, labelhash: PromiseOrValue<BytesLike>, controller: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
-<<<<<<< HEAD
         unwrapARB2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        unwrapETH2LD(labelhash: PromiseOrValue<BytesLike>, registrant: PromiseOrValue<string>, controller: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
         upgrade(parentNode: PromiseOrValue<BytesLike>, label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
         upgradeContract(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-<<<<<<< HEAD
         upgradeARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        upgradeETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
         uri(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         wrap(name: PromiseOrValue<BytesLike>, wrappedOwner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
-<<<<<<< HEAD
         wrapARB2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
-=======
-        wrapETH2LD(label: PromiseOrValue<string>, wrappedOwner: PromiseOrValue<string>, fuses: PromiseOrValue<BigNumberish>, expiry: PromiseOrValue<BigNumberish>, resolver: PromiseOrValue<string>, overrides?: Overrides & {
->>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             from?: PromiseOrValue<string>;
         }): Promise<PopulatedTransaction>;
     };
