@@ -21,18 +21,32 @@ import type wrapName from './functions/wrapName';
 import GqlManager from './GqlManager';
 import importDNSSECName from './functions/importDNSSECName';
 export type { Fuse, FuseArrayPossibilities, FuseObj, NamedFusesToBurn, UnnamedFuseType, UnnamedFuseValues, } from './utils/fuses';
+<<<<<<< HEAD
 declare type ANSOptions = {
     graphURI?: string | null;
     getContractAddress?: typeof _getContractAddress;
 };
 export declare type InternalANS = {
     options?: ANSOptions;
+=======
+declare type ENSOptions = {
+    graphURI?: string | null;
+    getContractAddress?: typeof _getContractAddress;
+};
+export declare type InternalENS = {
+    options?: ENSOptions;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     provider?: ethers.providers.Provider;
     signer: JsonRpcSigner;
     graphURI?: string | null;
 } & ANS;
+<<<<<<< HEAD
 export declare type ANSArgs<K extends keyof InternalANS> = {
     [P in K]: InternalANS[P];
+=======
+export declare type ENSArgs<K extends keyof InternalENS> = {
+    [P in K]: InternalENS[P];
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 };
 declare type OmitFirstArg<F> = F extends (x: any, ...args: infer P) => infer R ? (...args: P) => R : never;
 declare type OmitFirstTwoArgs<F> = F extends (x: any, y: any, ...args: infer P) => infer R ? (...args: P) => R : never;
@@ -71,14 +85,22 @@ export interface GenericGeneratedRawFunction extends Function, RawFunctionWithBa
 }
 export declare class ANS {
     [x: string]: any;
+<<<<<<< HEAD
     protected options?: ANSOptions;
+=======
+    protected options?: ENSOptions;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     protected provider?: ethers.providers.JsonRpcProvider;
     protected graphURI?: string | null;
     protected initialProvider?: ethers.providers.JsonRpcProvider;
     contracts?: ContractManager;
     getContractAddress: (networkId: SupportedNetworkId) => import("./contracts/getContractAddress").ContractAddressFetch;
     gqlInstance: GqlManager;
+<<<<<<< HEAD
     constructor(options?: ANSOptions);
+=======
+    constructor(options?: ENSOptions);
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     /**
      * Checks for an initial provider and if it exists, sets it as the provider
      * @returns {Promise<void>} - A promise that resolves when the provider is checked, and set if needed
@@ -136,11 +158,19 @@ export declare class ANS {
      */
     withProvider: (provider: ethers.providers.JsonRpcProvider) => ANS;
     batch: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ multicallWrapper }: ANSArgs<"multicallWrapper">, ...items: BatchFunctionResult<RawFunction>[]) => Promise<{
             to: string;
             data: string;
         }>;
         decode: ({ multicallWrapper }: ANSArgs<"multicallWrapper">, data: string, ...items: BatchFunctionResult<RawFunction>[]) => Promise<any[] | undefined>;
+=======
+        raw: ({ multicallWrapper }: ENSArgs<"multicallWrapper">, ...items: BatchFunctionResult<RawFunction>[]) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ multicallWrapper }: ENSArgs<"multicallWrapper">, data: string, ...items: BatchFunctionResult<RawFunction>[]) => Promise<any[] | undefined>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     }>;
     getProfile: (nameOrAddress: string, options?: ({
         contentHash?: boolean | undefined;
@@ -209,11 +239,19 @@ export declare class ANS {
         reverseResolverAddress?: string | undefined;
     } | undefined>;
     getName: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts }: ANSArgs<"contracts">, address: string) => Promise<{
             to: string;
             data: string;
         }>;
         decode: ({ contracts }: ANSArgs<"contracts">, data: string, address: string) => Promise<{
+=======
+        raw: ({ contracts }: ENSArgs<"contracts">, address: string) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts }: ENSArgs<"contracts">, data: string, address: string) => Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             name: any;
             match: boolean;
             reverseResolverAddress: any;
@@ -226,6 +264,7 @@ export declare class ANS {
         } | undefined>;
     }>;
     getResolver: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts }: ANSArgs<"contracts">, name: string) => Promise<{
             to: string;
             data: string;
@@ -238,6 +277,20 @@ export declare class ANS {
             data: string;
         }>;
         decode: ({ contracts }: ANSArgs<"contracts">, data: string) => Promise<{
+=======
+        raw: ({ contracts }: ENSArgs<"contracts">, name: string) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts }: ENSArgs<"contracts">, data: string) => Promise<any>;
+    }>;
+    getWrapperData: GeneratedRawFunction<{
+        raw: ({ contracts }: ENSArgs<"contracts">, name: string) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts }: ENSArgs<"contracts">, data: string) => Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             fuseObj: import("./utils/fuses").CurrentFuses;
             expiryDate: Date;
             rawFuses: ethers.BigNumber;
@@ -268,11 +321,19 @@ export declare class ANS {
         }[];
     } | undefined>;
     getContentHash: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts, universalWrapper }: ANSArgs<"contracts" | "universalWrapper">, name: string) => Promise<{
             to: string;
             data: string;
         }>;
         decode: ({ contracts, universalWrapper }: ANSArgs<"contracts" | "universalWrapper">, data: string) => Promise<{
+=======
+        raw: ({ contracts, universalWrapper }: ENSArgs<"contracts" | "universalWrapper">, name: string) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts, universalWrapper }: ENSArgs<"contracts" | "universalWrapper">, data: string) => Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             protocolType?: undefined;
             decoded?: undefined;
             error?: undefined;
@@ -287,11 +348,19 @@ export declare class ANS {
         } | undefined>;
     }>;
     _getContentHash: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts }: ANSArgs<"contracts">, name: string) => Promise<{
             to: string;
             data: string;
         }>;
         decode: ({ contracts }: ANSArgs<"contracts">, data: string) => Promise<{
+=======
+        raw: ({ contracts }: ENSArgs<"contracts">, name: string) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts }: ENSArgs<"contracts">, data: string) => Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             protocolType?: undefined;
             decoded?: undefined;
             error?: undefined;
@@ -306,26 +375,43 @@ export declare class ANS {
         } | undefined>;
     }>;
     getAddr: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts, universalWrapper }: ANSArgs<"contracts" | "universalWrapper">, name: string, coinType?: string | number | undefined) => Promise<{
             to: string;
             data: string;
         }>;
         decode: ({ contracts, universalWrapper }: ANSArgs<"contracts" | "universalWrapper">, data: string, _name: string, coinType?: string | number | undefined) => Promise<string | {
+=======
+        raw: ({ contracts, universalWrapper }: ENSArgs<"contracts" | "universalWrapper">, name: string, coinType?: string | number | undefined) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts, universalWrapper }: ENSArgs<"contracts" | "universalWrapper">, data: string, _name: string, coinType?: string | number | undefined) => Promise<string | {
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             coin: string;
             addr: string;
         } | undefined>;
     }>;
     _getAddr: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts }: ANSArgs<"contracts">, name: string, coinType?: string | number | undefined, bypassFormat?: boolean | undefined) => Promise<{
             to: string;
             data: string;
         }>;
         decode: ({ contracts }: ANSArgs<"contracts">, data: string, _name: string, coinType?: string | number | undefined) => Promise<string | {
+=======
+        raw: ({ contracts }: ENSArgs<"contracts">, name: string, coinType?: string | number | undefined, bypassFormat?: boolean | undefined) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts }: ENSArgs<"contracts">, data: string, _name: string, coinType?: string | number | undefined) => Promise<string | {
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             coin: string;
             addr: string;
         } | undefined>;
     }>;
     getText: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts, universalWrapper }: ANSArgs<"contracts" | "universalWrapper">, name: string, key: string) => Promise<{
             to: string;
             data: string;
@@ -345,19 +431,48 @@ export declare class ANS {
             data: string;
         }>;
         decode: ({ contracts, multicallWrapper }: ANSArgs<"contracts" | "multicallWrapper">, data: string, name: string, contract?: "nameWrapper" | "registrar" | "registry" | undefined) => Promise<{
+=======
+        raw: ({ contracts, universalWrapper }: ENSArgs<"contracts" | "universalWrapper">, name: string, key: string) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts, universalWrapper }: ENSArgs<"contracts" | "universalWrapper">, data: string) => Promise<any>;
+    }>;
+    _getText: GeneratedRawFunction<{
+        raw: ({ contracts }: ENSArgs<"contracts">, name: string, key: string) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts }: ENSArgs<"contracts">, data: string) => Promise<any>;
+    }>;
+    getOwner: GeneratedRawFunction<{
+        raw: ({ contracts, multicallWrapper }: ENSArgs<"contracts" | "multicallWrapper">, name: string, contract?: "nameWrapper" | "registrar" | "registry" | undefined) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts, multicallWrapper }: ENSArgs<"contracts" | "multicallWrapper">, data: string, name: string, contract?: "nameWrapper" | "registrar" | "registry" | undefined) => Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             registrant?: string | undefined;
             owner?: string | undefined;
             ownershipLevel: "nameWrapper" | "registrar" | "registry";
         } | undefined>;
     }>;
     getExpiry: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: (ansArgs: ANSArgs<"contracts" | "multicallWrapper">, name: string, { contract }?: {
+=======
+        raw: (ensArgs: ENSArgs<"contracts" | "multicallWrapper">, name: string, { contract }?: {
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             contract?: ("nameWrapper" | "registrar") | undefined;
         }) => Promise<{
             to: string;
             data: string;
         }>;
+<<<<<<< HEAD
         decode: (ansArgs: ANSArgs<"contracts" | "multicallWrapper">, data: string, name: string, { contract }?: {
+=======
+        decode: (ensArgs: ENSArgs<"contracts" | "multicallWrapper">, data: string, name: string, { contract }?: {
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             contract?: ("nameWrapper" | "registrar") | undefined;
         }) => Promise<{
             expiry: Date;
@@ -411,34 +526,55 @@ export declare class ANS {
         pageSize?: undefined;
     })) => Promise<import("./functions/getNames").Name[]>;
     getPrice: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts, multicallWrapper }: ANSArgs<"contracts" | "multicallWrapper">, nameOrNames: string | string[], duration: number, legacy?: boolean | undefined) => Promise<{
             to: string;
             data: string;
         }>;
         decode: ({ contracts, multicallWrapper }: ANSArgs<"contracts" | "multicallWrapper">, data: string, _nameOrNames: string | string[], _duration: number, legacy?: boolean | undefined) => Promise<{
+=======
+        raw: ({ contracts, multicallWrapper }: ENSArgs<"contracts" | "multicallWrapper">, nameOrNames: string | string[], duration: number, legacy?: boolean | undefined) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts, multicallWrapper }: ENSArgs<"contracts" | "multicallWrapper">, data: string, _nameOrNames: string | string[], _duration: number, legacy?: boolean | undefined) => Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             base: ethers.BigNumber;
             premium: ethers.BigNumber;
         } | undefined>;
     }>;
     getDNSOwner: (dnsName: string) => Promise<any>;
     universalWrapper: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts }: ANSArgs<"contracts">, name: string, data: string) => Promise<{
             to: string;
             data: string;
         }>;
         decode: ({ contracts }: ANSArgs<"contracts">, data: string) => Promise<{
+=======
+        raw: ({ contracts }: ENSArgs<"contracts">, name: string, data: string) => Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode: ({ contracts }: ENSArgs<"contracts">, data: string) => Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             data: any;
             resolver: any;
         } | undefined>;
     }>;
     resolverMulticallWrapper: GeneratedRawFunction<{
+<<<<<<< HEAD
         raw: ({ contracts }: ANSArgs<"contracts">, data: {
+=======
+        raw: ({ contracts }: ENSArgs<"contracts">, data: {
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             to: string;
             data: string;
         }[]) => Promise<{
             to: string;
             data: string;
         }>;
+<<<<<<< HEAD
         decode: ({ contracts }: ANSArgs<"contracts">, data: string) => Promise<ethers.utils.Result | undefined>;
     }>;
     multicallWrapper: GeneratedRawFunction<{
@@ -447,6 +583,16 @@ export declare class ANS {
             data: string;
         }>;
         decode({ contracts, provider }: ANSArgs<"provider" | "contracts">, data: string, transactions: ethers.providers.TransactionRequest[]): Promise<{
+=======
+        decode: ({ contracts }: ENSArgs<"contracts">, data: string) => Promise<ethers.utils.Result | undefined>;
+    }>;
+    multicallWrapper: GeneratedRawFunction<{
+        raw({ contracts }: ENSArgs<"contracts">, transactions: ethers.providers.TransactionRequest[], requireSuccess?: boolean): Promise<{
+            to: string;
+            data: string;
+        }>;
+        decode({ contracts, provider }: ENSArgs<"provider" | "contracts">, data: string, transactions: ethers.providers.TransactionRequest[]): Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
             success: boolean;
             returnData: string;
             0: boolean;

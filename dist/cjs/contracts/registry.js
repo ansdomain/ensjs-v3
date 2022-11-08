@@ -21,5 +21,10 @@ __export(registry_exports, {
   default: () => registry_default
 });
 module.exports = __toCommonJS(registry_exports);
+<<<<<<< HEAD
 var import_ANSRegistry_factory = require("../generated/factories/ANSRegistry__factory");
 var registry_default = (provider, address) => import_ANSRegistry_factory.ANSRegistry__factory.connect(address, provider);
+=======
+var import_ENSRegistry_factory = require("../generated/factories/ENSRegistry__factory");
+var registry_default = (provider, address) => import_ENSRegistry_factory.ENSRegistry__factory.connect(address, provider);
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)

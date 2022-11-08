@@ -47,7 +47,11 @@ const raw = async ({ contracts, multicallWrapper }, nameOrNames, duration, legac
     }
     return baseCall2;
   }
+<<<<<<< HEAD
   const controller = await contracts?.getArbRegistrarController();
+=======
+  const controller = await contracts?.getEthRegistrarController();
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
   const baseCall = {
     to: controller.address,
     data: controller.interface.encodeFunctionData("rentPrice", [
@@ -107,7 +111,11 @@ const decode = async ({ contracts, multicallWrapper }, data, _nameOrNames, _dura
       );
       base = price.sub(premium);
     } else {
+<<<<<<< HEAD
       const controller = await contracts?.getArbRegistrarController();
+=======
+      const controller = await contracts?.getEthRegistrarController();
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
       const result = controller.interface.decodeFunctionResult(
         "rentPrice",
         data

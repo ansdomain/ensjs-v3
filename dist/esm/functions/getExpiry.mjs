@@ -39,10 +39,17 @@ var getContractToUse = (contract, labels) => {
   }
   return "nameWrapper";
 };
+<<<<<<< HEAD
 var raw = async (ansArgs, name, { contract } = {}) => {
   const labels = name.split(".");
   const contractToUse = getContractToUse(contract, labels);
   return contractToUse === "nameWrapper" ? getWrapperExpiry(ansArgs, labels) : getRegistrarExpiry(ansArgs, labels);
+=======
+var raw = async (ensArgs, name, { contract } = {}) => {
+  const labels = name.split(".");
+  const contractToUse = getContractToUse(contract, labels);
+  return contractToUse === "nameWrapper" ? getWrapperExpiry(ensArgs, labels) : getRegistrarExpiry(ensArgs, labels);
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 };
 var decodeRegistrarExpiry = async ({ contracts, multicallWrapper }, data) => {
   const result = await multicallWrapper.decode(data);
@@ -79,12 +86,20 @@ var decodeWrapperExpiry = async ({ contracts }, data) => {
     return;
   }
 };
+<<<<<<< HEAD
 var decode = async (ansArgs, data, name, { contract } = {}) => {
+=======
+var decode = async (ensArgs, data, name, { contract } = {}) => {
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
   if (data === null)
     return;
   const labels = name.split(".");
   const contractToUse = getContractToUse(contract, labels);
+<<<<<<< HEAD
   return contractToUse === "nameWrapper" ? decodeWrapperExpiry(ansArgs, data) : decodeRegistrarExpiry(ansArgs, data);
+=======
+  return contractToUse === "nameWrapper" ? decodeWrapperExpiry(ensArgs, data) : decodeRegistrarExpiry(ensArgs, data);
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 };
 var getExpiry_default = {
   raw,

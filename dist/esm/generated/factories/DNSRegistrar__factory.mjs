@@ -22,7 +22,11 @@ var _abi = [
       },
       {
         internalType: "contract ANS",
+<<<<<<< HEAD
         name: "_ans",
+=======
+        name: "_ens",
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         type: "address"
       }
     ],
@@ -100,7 +104,11 @@ var _abi = [
   },
   {
     inputs: [],
+<<<<<<< HEAD
     name: "ans",
+=======
+    name: "ens",
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     outputs: [
       {
         internalType: "contract ANS",

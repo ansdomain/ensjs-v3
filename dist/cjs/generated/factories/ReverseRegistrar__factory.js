@@ -27,7 +27,11 @@ const _abi = [
     inputs: [
       {
         internalType: "contract ANS",
+<<<<<<< HEAD
         name: "ansAddr",
+=======
+        name: "ensAddr",
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         type: "address"
       }
     ],
@@ -210,7 +214,11 @@ const _abi = [
   },
   {
     inputs: [],
+<<<<<<< HEAD
     name: "ans",
+=======
+    name: "ens",
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     outputs: [
       {
         internalType: "contract ANS",

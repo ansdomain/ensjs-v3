@@ -1,6 +1,6 @@
 {
   "name": "@ansdomain/ensjs",
-  "version": "3.0.0-alpha.335",
+  "version": "3.0.0-alpha.31",
   "description": "ANS javascript library for contract interaction",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import { ANSArgs } from '..';
+=======
+import { ENSArgs } from '..';
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 import { CommitmentParams } from '../utils/registerHelpers';
 declare type Params = Omit<CommitmentParams, 'resolver' | 'name'> & {
     resolverAddress?: string;
 };
+<<<<<<< HEAD
 export default function ({ contracts }: ANSArgs<'contracts'>, name: string, { resolverAddress, ...params }: Params): Promise<{
+=======
+export default function ({ contracts }: ENSArgs<'contracts'>, name: string, { resolverAddress, ...params }: Params): Promise<{
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     customData: {
         secret: string;
         commitment: string;

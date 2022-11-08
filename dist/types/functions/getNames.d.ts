@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { ANSArgs } from '..';
+=======
+import { ENSArgs } from '..';
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 import { CurrentFuses } from '../utils/fuses';
 export declare type Name = {
     id: string;
@@ -42,5 +46,9 @@ declare type AllParams = {
     pageSize?: never;
 };
 declare type Params = BaseParams & (RegistrantParams | OwnerParams | WrappedOwnerParams | AllParams);
+<<<<<<< HEAD
 declare const getNames: ({ gqlInstance }: ANSArgs<'gqlInstance'>, { address: _address, type, page, pageSize, orderDirection, orderBy, }: Params) => Promise<Name[]>;
+=======
+declare const getNames: ({ gqlInstance }: ENSArgs<'gqlInstance'>, { address: _address, type, page, pageSize, orderDirection, orderBy, }: Params) => Promise<Name[]>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 export default getNames;

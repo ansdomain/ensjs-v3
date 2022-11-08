@@ -4,8 +4,13 @@ import { BulkRenewal__factory } from "./BulkRenewal__factory.mjs";
 import { DNSRegistrar__factory } from "./DNSRegistrar__factory.mjs";
 import { DNSSECImpl__factory } from "./DNSSECImpl__factory.mjs";
 import { DefaultReverseResolver__factory } from "./DefaultReverseResolver__factory.mjs";
+<<<<<<< HEAD
 import { ANSRegistry__factory } from "./ANSRegistry__factory.mjs";
 import { ARBRegistrarController__factory } from "./ARBRegistrarController__factory.mjs";
+=======
+import { ENSRegistry__factory } from "./ENSRegistry__factory.mjs";
+import { ETHRegistrarController__factory } from "./ETHRegistrarController__factory.mjs";
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 import { Multicall__factory } from "./Multicall__factory.mjs";
 import { NameWrapper__factory } from "./NameWrapper__factory.mjs";
 import { P256SHA256Algorithm__factory } from "./P256SHA256Algorithm__factory.mjs";
@@ -26,8 +31,13 @@ export {
   DNSRegistrar__factory,
   DNSSECImpl__factory,
   DefaultReverseResolver__factory,
+<<<<<<< HEAD
   ANSRegistry__factory,
   ARBRegistrarController__factory,
+=======
+  ENSRegistry__factory,
+  ETHRegistrarController__factory,
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
   Multicall__factory,
   NameWrapper__factory,
   P256SHA256Algorithm__factory,

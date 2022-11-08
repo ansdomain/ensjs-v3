@@ -23,6 +23,7 @@ __export(getContractAddress_exports, {
 module.exports = __toCommonJS(getContractAddress_exports);
 const addresses = {
   BaseRegistrarImplementation: {
+<<<<<<< HEAD
     "1": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
     "3": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
     "4": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
@@ -91,6 +92,28 @@ const addresses = {
     
     "421613": "0x7726eE45ce1E8323A672C6226CfA2Ab068Ed9C9b"
   }
+=======
+    "1": "0x16Ac1fe465c9Db4FD65b3b034c11D56Feff8a3bD",
+  },
+  DNSRegistrar: {
+    "1": "0xbE894f57362c254dd705BCc6bb0F3369B1157083",
+  },
+  ETHRegistrarController: {
+    "1": "0xc6A70cd44B083c8Dc0AaD36381591675B0350D1B",
+  },
+  NameWrapper: {
+    "1": "0x5d8B78c65b4afdB0d8d5C30334b15c701513eB93",
+  },
+  PublicResolver: {
+    "1": "0x0A05D2bEc53BAd83CE8C2BEc9e2cB9dd43A12cf5",
+  },
+  ReverseRegistrar: {
+    "1": "0xeE99b526Bfa5d7Fc2F573EF33520Cddc5465faDf",
+  },
+  UniversalResolver: {
+    "1": "0xBD2064e8075a62fCB71fD54B80Ff695e3a4a1F67",
+  },
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 };
 const getContractAddress = (networkId) => (contractName) => {
   try {

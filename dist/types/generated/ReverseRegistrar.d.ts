@@ -9,7 +9,11 @@ export interface ReverseRegistrarInterface extends utils.Interface {
         "claimWithResolver(address,address)": FunctionFragment;
         "controllers(address)": FunctionFragment;
         "defaultResolver()": FunctionFragment;
+<<<<<<< HEAD
         "ans()": FunctionFragment;
+=======
+        "ens()": FunctionFragment;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         "node(address)": FunctionFragment;
         "owner()": FunctionFragment;
         "renounceOwnership()": FunctionFragment;
@@ -19,7 +23,11 @@ export interface ReverseRegistrarInterface extends utils.Interface {
         "setNameForAddr(address,address,address,string)": FunctionFragment;
         "transferOwnership(address)": FunctionFragment;
     };
+<<<<<<< HEAD
     getFunction(nameOrSignatureOrTopic: "claim" | "claimForAddr" | "claimWithResolver" | "controllers" | "defaultResolver" | "ans" | "node" | "owner" | "renounceOwnership" | "setController" | "setDefaultResolver" | "setName" | "setNameForAddr" | "transferOwnership"): FunctionFragment;
+=======
+    getFunction(nameOrSignatureOrTopic: "claim" | "claimForAddr" | "claimWithResolver" | "controllers" | "defaultResolver" | "ens" | "node" | "owner" | "renounceOwnership" | "setController" | "setDefaultResolver" | "setName" | "setNameForAddr" | "transferOwnership"): FunctionFragment;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     encodeFunctionData(functionFragment: "claim", values: [PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "claimForAddr", values: [
         PromiseOrValue<string>,
@@ -29,7 +37,11 @@ export interface ReverseRegistrarInterface extends utils.Interface {
     encodeFunctionData(functionFragment: "claimWithResolver", values: [PromiseOrValue<string>, PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "controllers", values: [PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "defaultResolver", values?: undefined): string;
+<<<<<<< HEAD
     encodeFunctionData(functionFragment: "ans", values?: undefined): string;
+=======
+    encodeFunctionData(functionFragment: "ens", values?: undefined): string;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     encodeFunctionData(functionFragment: "node", values: [PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "owner", values?: undefined): string;
     encodeFunctionData(functionFragment: "renounceOwnership", values?: undefined): string;
@@ -48,7 +60,11 @@ export interface ReverseRegistrarInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "claimWithResolver", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "controllers", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "defaultResolver", data: BytesLike): Result;
+<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
+=======
+    decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     decodeFunctionResult(functionFragment: "node", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "renounceOwnership", data: BytesLike): Result;
@@ -128,7 +144,11 @@ export interface ReverseRegistrar extends BaseContract {
         }): Promise<ContractTransaction>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
         defaultResolver(overrides?: CallOverrides): Promise<[string]>;
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<[string]>;
+=======
+        ens(overrides?: CallOverrides): Promise<[string]>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         node(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[string]>;
         owner(overrides?: CallOverrides): Promise<[string]>;
         renounceOwnership(overrides?: Overrides & {
@@ -161,7 +181,11 @@ export interface ReverseRegistrar extends BaseContract {
     }): Promise<ContractTransaction>;
     controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
     defaultResolver(overrides?: CallOverrides): Promise<string>;
+<<<<<<< HEAD
     ans(overrides?: CallOverrides): Promise<string>;
+=======
+    ens(overrides?: CallOverrides): Promise<string>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     node(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<string>;
     owner(overrides?: CallOverrides): Promise<string>;
     renounceOwnership(overrides?: Overrides & {
@@ -188,7 +212,11 @@ export interface ReverseRegistrar extends BaseContract {
         claimWithResolver(owner: PromiseOrValue<string>, resolver: PromiseOrValue<string>, overrides?: CallOverrides): Promise<string>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
         defaultResolver(overrides?: CallOverrides): Promise<string>;
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<string>;
+=======
+        ens(overrides?: CallOverrides): Promise<string>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         node(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<string>;
         owner(overrides?: CallOverrides): Promise<string>;
         renounceOwnership(overrides?: CallOverrides): Promise<void>;
@@ -220,7 +248,11 @@ export interface ReverseRegistrar extends BaseContract {
         }): Promise<BigNumber>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
         defaultResolver(overrides?: CallOverrides): Promise<BigNumber>;
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<BigNumber>;
+=======
+        ens(overrides?: CallOverrides): Promise<BigNumber>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         node(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
         owner(overrides?: CallOverrides): Promise<BigNumber>;
         renounceOwnership(overrides?: Overrides & {
@@ -254,7 +286,11 @@ export interface ReverseRegistrar extends BaseContract {
         }): Promise<PopulatedTransaction>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         defaultResolver(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+=======
+        ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         node(addr: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         renounceOwnership(overrides?: Overrides & {

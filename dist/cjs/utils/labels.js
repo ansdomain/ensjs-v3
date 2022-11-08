@@ -63,14 +63,22 @@ function isEncodedLabelhash(hash) {
   return hash.startsWith("[") && hash.endsWith("]") && hash.length === 66;
 }
 function getLabels() {
+<<<<<<< HEAD
   return hasLocalStorage ? JSON.parse(localStorage.getItem("ansjs:labels")) || {} : {};
+=======
+  return hasLocalStorage ? JSON.parse(localStorage.getItem("ensjs:labels")) || {} : {};
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 }
 function _saveLabel(hash, label) {
   if (!hasLocalStorage)
     return hash;
   const labels = getLabels();
   localStorage.setItem(
+<<<<<<< HEAD
     "ansjs:labels",
+=======
+    "ensjs:labels",
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     JSON.stringify({
       ...labels,
       [hash]: label

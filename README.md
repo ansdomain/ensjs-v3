@@ -1,6 +1,6 @@
 # ![ENSjs](https://user-images.githubusercontent.com/11844316/161689061-98ea01ee-b119-40ac-a512-5370eb8b4107.svg)
 
-The ultimate ENS javascript library, with [ethers.js](https://github.com/ethers-io/ethers.js) under the hood.
+The ultimate ANS javascript library, with [ethers.js](https://github.com/ethers-io/ethers.js) under the hood.
 
 ## NOTE!!!
 
@@ -9,7 +9,7 @@ We also use undeployed contracts under the hood, so this **will not** work on an
 
 Given the current development status, we're actively seeking feedback so feel free to create an issue or PR if you notice something!
 
-If you are looking for documentation for **version 2**, it an be found [here](https://github.com/ensdomains/ensjs#readme).
+If you are looking for documentation for **version 2**, it an be found [here](https://github.com/ansdomain/ensjs#readme).
 
 ## Features
 
@@ -17,29 +17,29 @@ If you are looking for documentation for **version 2**, it an be found [here](ht
 - Super fast response times (1 call for most RPC calls)
 - Easy call batchability
 - Written in TypeScript
-- Supports the most cutting edge ENS features
+- Supports the most cutting edge ANS features
 - - More
 
 ## Installation
 
-Install @ensdomains/ensjs, alongside [ethers](https://github.com/ethers-io/ethers.js).
+Install @ansdomain/ensjs, alongside [ethers](https://github.com/ethers-io/ethers.js).
 
 ```sh
-npm install @ensdomains/ensjs ethers
+npm install @ansdomain/ensjs ethers
 ```
 
 ## Getting Started
 
 All that's needed to get started is an ethers provider instance.
-Once you create a new ENS instance, you can pass it in using setProvider.
+Once you create a new ANS instance, you can pass it in using setProvider.
 
 ```js
-import { ENS } from '@ensdomains/ensjs'
+import { ANS } from '@ansdomain/ensjs'
 import { ethers } from 'ethers'
 
 const provider = new ethers.providers.JsonRpcProvider(providerUrl)
 
-const ENSInstance = new ENS()
+const ENSInstance = new ANS()
 await ENSInstance.setProvider(provider)
 ```
 
@@ -51,9 +51,9 @@ The batch function is a large part of this library, and there are plenty of situ
 ```js
 /* Batch functions can be called like so, with the function as the first item in an array, with the following items being the function's arguments */
 const batched = await ENSInstance.batch(
-  ENSInstance.getText.batch('test.eth', 'foo'),
-  ENSInstance.getAddr.batch('test.eth'),
-  ENSInstance.getOwner.batch('test.eth'),
+  ENSInstance.getText.batch('test.arb', 'foo'),
+  ENSInstance.getAddr.batch('test.arb'),
+  ENSInstance.getOwner.batch('test.arb'),
 )
 
 /* The response is formatted like so:
@@ -68,19 +68,19 @@ const batched = await ENSInstance.batch(
 
 ## Using Custom Graph Node URIs
 
-If you want to use your own graph-node URI, such as a local graph-node URI, you can pass it through when creating a new ENS instance.
+If you want to use your own graph-node URI, such as a local graph-node URI, you can pass it through when creating a new ANS instance.
 Alternatively, if you don't want to use The Graph at all you can pass through `null`.
 
 ```js
-import { ENS } from '@ensdomains/ensjs'
+import { ANS } from '@ansdomain/ensjs'
 
 /* If you want to use a custom URI */
-const ENSInstance = new ENS({
+const ENSInstance = new ANS({
   graphURI: 'http://localhost:8000/subgraphs/name/graphprotocol/ens',
 })
 
 /* If you want to disable The Graph queries */
-const ENSInstance = new ENS({ graphURI: null })
+const ENSInstance = new ANS({ graphURI: null })
 ```
 
 ## Single-use Providers
@@ -88,19 +88,19 @@ const ENSInstance = new ENS({ graphURI: null })
 If you want to use a specific provider to make a single call occasionally, you can easily do so.
 
 ```js
-import { ENS } from '@ensdomains/ensjs'
+import { ANS } from '@ansdomain/ensjs'
 
-const ENSInstance = new ENS()
+const ENSInstance = new ANS()
 
 const callWithProvider = await ENSInstance.withProvider(otherProvider).getText(
-  'test.eth',
+  'test.arb',
   'foo',
 )
 ```
 
 ## Profiles
 
-You can fetch almost all information about an ENS name (or address) using getProfile.
+You can fetch almost all information about an ANS name (or address) using getProfile.
 If an address is used as the first argument, it will fetch the primary name and give the same response as a name would.
 It will automatically get all the records for a name, as well as get the resolver address for the name.
 Specific records can also be used as an input, if you only want to get certain ones. If an address is used as an input alongside this,
@@ -113,7 +113,7 @@ For addresses, this means the "match" property (a boolean value for matching rev
 
 ```js
 /* Normal profile fetching */
-const profile = await ENSInstance.getProfile('test.eth')
+const profile = await ENSInstance.getProfile('test.arb')
 
 /* Profile fetching from an address */
 const profile = await ENSInstance.getProfile(
@@ -121,14 +121,14 @@ const profile = await ENSInstance.getProfile(
 )
 
 /* Get all records of a specific type (or multiple) */
-const profile = await ENSInstance.getProfile('test.eth', {
+const profile = await ENSInstance.getProfile('test.arb', {
   texts: true,
   coinTypes: true,
   contentHash: true,
 })
 
 /* Get specific records */
-const profile = await ENSInstance.getProfile('test.eth', {
+const profile = await ENSInstance.getProfile('test.arb', {
   texts: ['foo'],
   coinTypes: ['ETH'],
 })
@@ -160,13 +160,13 @@ type ProfileReturn = {
 ## Name History
 
 Getting the history for a name is very simple and can be done in two ways.
-Not all data can be immediately fetched for the history of an ENS name, which is why there is multiple methods for doing so.
+Not all data can be immediately fetched for the history of an ANS name, which is why there is multiple methods for doing so.
 Text records do not contain the string value of the changed record, only the key. The value needs to be derived from fetching
 the individual transaction hash. This can potentially be very slow if the name has a long history.
 
 ```js
 /* Normal Fetching, requires a second function for more details */
-const history = await ENSInstance.getHistory('test.eth')
+const history = await ENSInstance.getHistory('test.arb')
 
 /* Details helper for history */
 /* You'll need to implement custom logic to get the index if you want to use that parameter, it's not currently done in the function */
@@ -176,7 +176,7 @@ const detail = await ENSInstance.getHistoryDetailForTransactionHash(
 )
 
 /* Fetching with all details upfront */
-const historyWithDetail = await ENSInstance.getHistoryWithDetail('test.eth')
+const historyWithDetail = await ENSInstance.getHistoryWithDetail('test.arb')
 ```
 
 ## Ownership Levels
@@ -192,15 +192,15 @@ Wrapping names is very simple, you can wrap any name from the same function, wit
 You can specify both the fuses and resolver address to use with the wrapped name, but it's entirely optional.
 
 ```js
-/* wrap a .eth name */
+/* wrap a .arb name */
 const tx = await ENSInstance.wrapName(
-  'test.eth', // Name to wrap
+  'test.arb', // Name to wrap
   '0xeefB13C7D42eFCc655E528dA6d6F7bBcf9A2251d', // New owner of wrapped name
 )
 
 /* wrap any other name (e.g. a subname) */
 const tx = await ENSInstance.wrapName(
-  'sub.test.eth',
+  'sub.test.arb',
   '0xeefB13C7D42eFCc655E528dA6d6F7bBcf9A2251d',
 )
 ```
@@ -242,13 +242,13 @@ A new instance of ContractManager is created every time you switch providers.
 ### GqlManager
 
 The GQL manager is used as to separate the reliance of ENSjs from GQL.
-It only loads in GQL when it is needed, or not at all if specified in the constructor of the ENS class.
+It only loads in GQL when it is needed, or not at all if specified in the constructor of the ANS class.
 Very simply, it just exposes the core functions needed for ENSjs which can then be accessed.
 
 ### initialProvider
 
 The `initialProvider`, and similarly `checkInitialProvider` are used when creating single-use class instances with `withProvider`.
-It allows `withProvider` to act as a new ENS instance without having to await a promise, which simplifies the API.
+It allows `withProvider` to act as a new ANS instance without having to await a promise, which simplifies the API.
 `checkInitialProvider` is run on every function call given that it's extremely lightweight.
 
 ## Individual Functions

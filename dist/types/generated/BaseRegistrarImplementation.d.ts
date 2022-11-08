@@ -11,7 +11,11 @@ export interface BaseRegistrarImplementationInterface extends utils.Interface {
         "balanceOf(address)": FunctionFragment;
         "baseNode()": FunctionFragment;
         "controllers(address)": FunctionFragment;
+<<<<<<< HEAD
         "ans()": FunctionFragment;
+=======
+        "ens()": FunctionFragment;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         "getApproved(uint256)": FunctionFragment;
         "isApprovedForAll(address,address)": FunctionFragment;
         "isOwner()": FunctionFragment;
@@ -32,7 +36,11 @@ export interface BaseRegistrarImplementationInterface extends utils.Interface {
         "transferFrom(address,address,uint256)": FunctionFragment;
         "transferOwnership(address)": FunctionFragment;
     };
+<<<<<<< HEAD
     getFunction(nameOrSignatureOrTopic: "GRACE_PERIOD" | "addController" | "approve" | "available" | "balanceOf" | "baseNode" | "controllers" | "ans" | "getApproved" | "isApprovedForAll" | "isOwner" | "nameExpires" | "owner" | "ownerOf" | "reclaim" | "register" | "registerOnly" | "removeController" | "renew" | "renounceOwnership" | "safeTransferFrom(address,address,uint256)" | "safeTransferFrom(address,address,uint256,bytes)" | "setApprovalForAll" | "setResolver" | "supportsInterface" | "transferFrom" | "transferOwnership"): FunctionFragment;
+=======
+    getFunction(nameOrSignatureOrTopic: "GRACE_PERIOD" | "addController" | "approve" | "available" | "balanceOf" | "baseNode" | "controllers" | "ens" | "getApproved" | "isApprovedForAll" | "isOwner" | "nameExpires" | "owner" | "ownerOf" | "reclaim" | "register" | "registerOnly" | "removeController" | "renew" | "renounceOwnership" | "safeTransferFrom(address,address,uint256)" | "safeTransferFrom(address,address,uint256,bytes)" | "setApprovalForAll" | "setResolver" | "supportsInterface" | "transferFrom" | "transferOwnership"): FunctionFragment;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     encodeFunctionData(functionFragment: "GRACE_PERIOD", values?: undefined): string;
     encodeFunctionData(functionFragment: "addController", values: [PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "approve", values: [PromiseOrValue<string>, PromiseOrValue<BigNumberish>]): string;
@@ -40,7 +48,11 @@ export interface BaseRegistrarImplementationInterface extends utils.Interface {
     encodeFunctionData(functionFragment: "balanceOf", values: [PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "baseNode", values?: undefined): string;
     encodeFunctionData(functionFragment: "controllers", values: [PromiseOrValue<string>]): string;
+<<<<<<< HEAD
     encodeFunctionData(functionFragment: "ans", values?: undefined): string;
+=======
+    encodeFunctionData(functionFragment: "ens", values?: undefined): string;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     encodeFunctionData(functionFragment: "getApproved", values: [PromiseOrValue<BigNumberish>]): string;
     encodeFunctionData(functionFragment: "isApprovedForAll", values: [PromiseOrValue<string>, PromiseOrValue<string>]): string;
     encodeFunctionData(functionFragment: "isOwner", values?: undefined): string;
@@ -88,7 +100,11 @@ export interface BaseRegistrarImplementationInterface extends utils.Interface {
     decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "baseNode", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "controllers", data: BytesLike): Result;
+<<<<<<< HEAD
     decodeFunctionResult(functionFragment: "ans", data: BytesLike): Result;
+=======
+    decodeFunctionResult(functionFragment: "ens", data: BytesLike): Result;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     decodeFunctionResult(functionFragment: "getApproved", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "isApprovedForAll", data: BytesLike): Result;
     decodeFunctionResult(functionFragment: "isOwner", data: BytesLike): Result;
@@ -242,7 +258,11 @@ export interface BaseRegistrarImplementation extends BaseContract {
         balanceOf(owner: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[BigNumber]>;
         baseNode(overrides?: CallOverrides): Promise<[string]>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<[string]>;
+=======
+        ens(overrides?: CallOverrides): Promise<[string]>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         getApproved(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<[string]>;
         isApprovedForAll(owner: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<[boolean]>;
         isOwner(overrides?: CallOverrides): Promise<[boolean]>;
@@ -298,7 +318,11 @@ export interface BaseRegistrarImplementation extends BaseContract {
     balanceOf(owner: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
     baseNode(overrides?: CallOverrides): Promise<string>;
     controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
+<<<<<<< HEAD
     ans(overrides?: CallOverrides): Promise<string>;
+=======
+    ens(overrides?: CallOverrides): Promise<string>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     getApproved(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<string>;
     isApprovedForAll(owner: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
     isOwner(overrides?: CallOverrides): Promise<boolean>;
@@ -350,7 +374,11 @@ export interface BaseRegistrarImplementation extends BaseContract {
         balanceOf(owner: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
         baseNode(overrides?: CallOverrides): Promise<string>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<string>;
+=======
+        ens(overrides?: CallOverrides): Promise<string>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         getApproved(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<string>;
         isApprovedForAll(owner: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<boolean>;
         isOwner(overrides?: CallOverrides): Promise<boolean>;
@@ -403,7 +431,11 @@ export interface BaseRegistrarImplementation extends BaseContract {
         balanceOf(owner: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
         baseNode(overrides?: CallOverrides): Promise<BigNumber>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<BigNumber>;
+=======
+        ens(overrides?: CallOverrides): Promise<BigNumber>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         getApproved(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<BigNumber>;
         isApprovedForAll(owner: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<BigNumber>;
         isOwner(overrides?: CallOverrides): Promise<BigNumber>;
@@ -460,7 +492,11 @@ export interface BaseRegistrarImplementation extends BaseContract {
         balanceOf(owner: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         baseNode(overrides?: CallOverrides): Promise<PopulatedTransaction>;
         controllers(arg0: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+<<<<<<< HEAD
         ans(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+=======
+        ens(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
         getApproved(tokenId: PromiseOrValue<BigNumberish>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         isApprovedForAll(owner: PromiseOrValue<string>, operator: PromiseOrValue<string>, overrides?: CallOverrides): Promise<PopulatedTransaction>;
         isOwner(overrides?: CallOverrides): Promise<PopulatedTransaction>;

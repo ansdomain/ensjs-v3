@@ -76,7 +76,11 @@ const dnsQuery = async (qtype, qname) => {
   return response;
 };
 async function getDNSOwner_default(_, dnsName) {
+<<<<<<< HEAD
   const result = await dnsQuery("TXT", `_ans.${dnsName}`);
+=======
+  const result = await dnsQuery("TXT", `_ens.${dnsName}`);
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
   const address = result?.answers?.[0]?.data?.[0]?.toString()?.split("=")?.[1];
   return address;
 }

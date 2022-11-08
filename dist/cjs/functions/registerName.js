@@ -28,7 +28,11 @@ async function registerName_default({ contracts }, name, { resolverAddress, valu
   if (labels.length !== 2 || labels[1] !== "arb")
     throw new Error("Currently only .arb TLD registrations are supported");
   (0, import_wrapper.wrappedLabelLengthCheck)(labels[0]);
+<<<<<<< HEAD
   const controller = await contracts.getArbRegistrarController();
+=======
+  const controller = await contracts.getEthRegistrarController();
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
   const _resolver = await contracts.getPublicResolver(
     void 0,
     resolverAddress

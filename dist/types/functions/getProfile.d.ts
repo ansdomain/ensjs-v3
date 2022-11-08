@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { ANSArgs } from '..';
+=======
+import { ENSArgs } from '..';
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 import { DecodedContentHash } from '../utils/contentHash';
 declare type FallbackRecords = {
     contentHash?: boolean;
@@ -35,5 +39,9 @@ declare type InputProfileOptions = ProfileOptions & {
     resolverAddress?: string;
     fallback?: FallbackRecords;
 };
+<<<<<<< HEAD
 export default function ({ contracts, gqlInstance, getName, _getAddr, _getContentHash, _getText, resolverMulticallWrapper, multicallWrapper, }: ANSArgs<'contracts' | 'gqlInstance' | 'getName' | '_getText' | '_getAddr' | '_getContentHash' | 'resolverMulticallWrapper' | 'multicallWrapper'>, nameOrAddress: string, options?: InputProfileOptions): Promise<ResolvedProfile | undefined>;
+=======
+export default function ({ contracts, gqlInstance, getName, _getAddr, _getContentHash, _getText, resolverMulticallWrapper, multicallWrapper, }: ENSArgs<'contracts' | 'gqlInstance' | 'getName' | '_getText' | '_getAddr' | '_getContentHash' | 'resolverMulticallWrapper' | 'multicallWrapper'>, nameOrAddress: string, options?: InputProfileOptions): Promise<ResolvedProfile | undefined>;
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
 export {};

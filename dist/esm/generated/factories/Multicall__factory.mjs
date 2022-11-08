@@ -316,7 +316,11 @@ var _abi = [
         type: "address"
       }
     ],
+<<<<<<< HEAD
     name: "getArbBalance",
+=======
+    name: "getEthBalance",
+>>>>>>> fb31bd9e (@ansdomain/ensjs@3.0.0-alpha.31)
     outputs: [
       {
         internalType: "uint256",
